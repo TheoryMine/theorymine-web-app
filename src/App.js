@@ -13,6 +13,7 @@ import Testimonials from "./pages/content-only/Testimonials"
 import FooterBanner from "./common/banners/FooterBanner"
 import Cancellations from "./pages/content-only/Cancellations"
 import TC from "./pages/content-only/TandC"
+import PrivacyPolicy from "./pages/content-only/PrivacyPolicy"
 
 class App extends Component {
   static displayName = 'App';
@@ -36,6 +37,7 @@ class App extends Component {
               <Route  name='Testimonials' path='/testimonials' component={Testimonials}/>
               <Route  name='Cancellations' path='/cancellations' component={Cancellations}/>
               <Route  name='Terms ans Conditions' path='/tc' component={TC}/>
+              <Route  name='Privacy Policy' path='/privacy' component={PrivacyPolicy}/>
               <Redirect to='/'/>
             </Switch>
             <FooterBanner/>

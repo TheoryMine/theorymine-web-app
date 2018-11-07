@@ -10,8 +10,8 @@ const TC = () => {
 
   return (
     <ContentPage>
-      <h2 className="section-heading-lower m-4">Terms and Conditions of Website use</h2>
-      <h2 className="section-heading-upper m-4">www.theorymine.co.uk</h2>
+      <h2 className="section-heading-lower mt-4">Terms and Conditions of Website </h2>
+      <h2 className="section-heading-upper mb-4">www.theorymine.co.uk</h2>
       <p>This page lists the terms and conditions for use TheoryMine thought this website.</p>
 
       <ol type="1">
