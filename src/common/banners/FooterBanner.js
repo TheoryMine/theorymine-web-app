@@ -10,9 +10,8 @@ export default class FooterBanner extends PureComponent {
       <div className='footer-banner m-3 p-2'>
         <div>
           <a href="/">{local['footer_tc']}</a> |
-          <a href="/">{local['footer_contact']}</a> |
-          <a href="/">{local['footer_privacy']}</a> | 
-          <a href="/">{local['footer_cancellations']}</a>
+          <a href="/">{local['footer_privacy']}</a> |
+          <a href="/cancellations">{local['footer_cancellations']}</a>
         </div>
         <p>
           Copyright 2011 TheoryMine Limited

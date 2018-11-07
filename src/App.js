@@ -11,6 +11,7 @@ import About from "./pages/content-only/AboutUs"
 import GiftPacks from "./pages/content-only/GiftPacks"
 import Testimonials from "./pages/content-only/Testimonials"
 import FooterBanner from "./common/banners/FooterBanner"
+import Cancellations from "./pages/content-only/Cancellations"
 
 class App extends Component {
   static displayName = 'App';
@@ -32,6 +33,7 @@ class App extends Component {
               <Route  name='About' path='/about' component={About}/>
               <Route  name='Gifts' path='/gifts' component={GiftPacks}/>
               <Route  name='Testimonials' path='/testimonials' component={Testimonials}/>
+              <Route  name='Cancellations' path='/cancellations' component={Cancellations}/>
               <Redirect to='/'/>
             </Switch>
             <FooterBanner/>

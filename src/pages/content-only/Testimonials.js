@@ -4,7 +4,7 @@ import { local } from "../../common/utils/localization"
 import anneGlover from '../../images/anne_glover_small.jpg';
 import ned from '../../images/neds_theorem.jpg';
 
-const testimonials = () => {
+const Testimonials = () => {
 
   return (
     <ContentPage>
@@ -53,11 +53,11 @@ const testimonials = () => {
   )
 }
 
-testimonials.propTypes = {};
+Testimonials.propTypes = {};
 
-testimonials.defaultProps = {}
+Testimonials.defaultProps = {}
 
-export default testimonials;
+export default Testimonials;
 
 
 
