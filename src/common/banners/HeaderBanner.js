@@ -6,13 +6,7 @@ import spanish_flag from "../../images/spanish_flag.gif"
 
 import '../../index.scss'
 
-import PropTypes from 'prop-types'
-
 export default class HeaderBanner extends PureComponent {
-  static propTypes = {
-    isLoggedIn: PropTypes.bool,
-    onSignOut: PropTypes.func,
-  }
 
   render () {
 

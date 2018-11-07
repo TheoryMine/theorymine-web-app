@@ -10,6 +10,7 @@ import Faq from "./pages/content-only/Faq"
 import About from "./pages/content-only/AboutUs"
 import GiftPacks from "./pages/content-only/GiftPacks"
 import Testimonials from "./pages/content-only/Testimonials"
+import FooterBanner from "./common/banners/FooterBanner"
 
 class App extends Component {
   static displayName = 'App';
@@ -33,6 +34,7 @@ class App extends Component {
               <Route  name='Testimonials' path='/testimonials' component={Testimonials}/>
               <Redirect to='/'/>
             </Switch>
+            <FooterBanner/>
           </Fragment>
         </Router>
       </Provider>
