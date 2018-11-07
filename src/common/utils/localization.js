@@ -108,7 +108,7 @@ const localisation = {
     gift_h1: 'NAME A THEOREM + PDF CERTIFICATE: &pound;15',
     gift_h2: 'GIFT ITEMS:',
     gift_h1_1: 'When you buy a theorem you will receive:',
-    gift_li1_1: 'An printable electronic colour PDF Certificate of registration, with the theorem that you named and the name that you have chosen to attach to it forever. <a href="?go=certificate_example" target="_black">View</a>',
+    gift_li1_1: 'An printable electronic colour PDF Certificate of registration, with the theorem that you named and the name that you have chosen to attach to it forever.',
     gift_li1_2: 'A brochure which will help you interpret your theorem',
     gift_li1_3: 'A user name and password to log in our website and view your theorems and certificates at any time',
     gift_h1_2: 'In addition you can purchase any of these extras stating your theorem:',
@@ -116,7 +116,7 @@ const localisation = {
     gift_li2_2: 'A mug:from &pound;12.35',
     gift_li2_3: 'A mouse mat:from &pound;10.10',
     gift_provider: 'All gift items are provided and manufactured by <a href="http://www.zazzle.co.uk/">Zazzle</a>',
-    gift_end: 'To buy a gift item first purchase a theorem. Once you receive this you will be able to follow the "Gift Items Shop" link next to your theorem name on <a href= "?go=login">your profile page</a>.',
+    gift_end: 'To buy a gift item first purchase a theorem. Once you receive this you will be able to follow the "Gift Items Shop" link next to your theorem name on your profile page',
 
     //Testimonials
 

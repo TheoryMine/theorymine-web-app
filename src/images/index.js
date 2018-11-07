@@ -12,3 +12,7 @@ export lucas_dixon from './lucas_dixon.JPG';
 export moa_johannson from './moa_johannson.jpg';
 export alan_bundy from './alan_bundy.jpg';
 export flaminia_cavallo from './flaminia_cavallo4.jpg';
+export theorymine_mousepad from './theorymine_mousepad.jpg';
+export theorymine_mug from './theorymine_mug.jpg';
+export theorymine_t_shirt2 from './theorymine_t_shirt2.jpg';
+export theorymine_tshirt1 from './theorymine_tshirt1.jpg';
