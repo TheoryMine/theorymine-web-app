@@ -19,7 +19,7 @@ export default class Home extends Component {
 
       <div className="home-page" style={{ backgroundImage: "url(" + homeBackground + ")" }}>
         <div className="description-box">
-          <h2 className="section-heading mb-4 mt-4">
+          <h2 className="mb-4 mt-4">
             <span className="section-heading-upper">TheoryMine lets you name a personalised, newly discovered, mathematical theorems as a novelty gift.</span>
           </h2>
           <p className="mb-0">Name your very own mathematical theorem, newly discovered by one of the world's most

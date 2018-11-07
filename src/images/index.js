@@ -7,3 +7,4 @@ export chinese_flag from './chinese_flag.gif';
 export homebackground from './homebackground.png';
 export number_button_empty from './number_button_empty.png';
 export number_button_full from './number_button_full.png';
+export info_page_background from './info-page-background.gif';

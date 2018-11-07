@@ -6,6 +6,7 @@ import { Router, Route, Switch, Redirect } from 'react-router-dom';
 import history from "./common/history"
 import Home from "./pages/home/Home"
 import HeaderBanner from "./common/banners/HeaderBanner"
+import Faq from "./pages/content-only/Faq"
 
 class App extends Component {
   static displayName = 'App';
@@ -23,6 +24,7 @@ class App extends Component {
             <HeaderBanner/>
             <Switch>
               <Route exact name='Home Page' path='/' component={Home}/>
+              <Route  name='F.A.Q.' path='/faq' component={Faq}/>
               <Redirect to='/'/>
             </Switch>
           </Fragment>

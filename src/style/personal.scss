@@ -43,3 +43,27 @@ sup {
   font-size: 23px;
   padding: 3px 13px 3px 14px;
 }
+
+.content-only-page{
+  padding: 5px;
+  background-repeat: no-repeat;
+  background-position: top right;
+  margin-top: 4px;
+}
+
+.content-only-page .content-box{
+    width: 70%;
+  }
+
+.content-only-page .content a{
+  color: #b4975a;
+}
+.content-only-page .content{
+  font-size: 14px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  border-right: 2px solid #b4975a;
+  border-left: 2px solid #b4975a;
+  padding: 15px;
+}
