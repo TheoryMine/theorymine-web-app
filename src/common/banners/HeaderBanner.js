@@ -36,8 +36,7 @@ export default class HeaderBanner extends PureComponent {
         <nav className="navbar navbar-expand-lg navbar-dark py-lg-3" id="mainNav">
 
           <div className="container">
-            <a className="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="#">Ludo e
-              Fizze</a>
+            <a className="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="#">TheoryMine</a>
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
                     aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
               <span className="navbar-toggler-icon"></span>
