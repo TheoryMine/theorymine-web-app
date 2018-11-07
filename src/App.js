@@ -1,10 +1,12 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { Provider } from 'react-redux';
 import { Router, Route, Switch, Redirect } from 'react-router-dom';
 
 import history from "./common/history"
 import Home from "./pages/home/Home"
+import HeaderBanner from "./common/banners/HeaderBanner"
+
 class App extends Component {
   static displayName = 'App';
 
@@ -17,10 +19,13 @@ class App extends Component {
     return (
       <Provider store={this.props.store}>
         <Router history={history}>
-          <Switch>
-            <Route exact name='Home Page' path='/' component={Home}/>
-            <Redirect to='/'/>
-          </Switch>
+          <Fragment>
+            <HeaderBanner/>
+            <Switch>
+              <Route exact name='Home Page' path='/' component={Home}/>
+              <Redirect to='/'/>
+            </Switch>
+          </Fragment>
         </Router>
       </Provider>
     );

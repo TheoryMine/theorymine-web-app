@@ -1,9 +1,15 @@
 import React, { PureComponent } from 'react'
-import favicon from "../../images/favicon.ico"
+import logo from "../../images/logo.png"
+import mathematicians from "../../images/mathematicians.png"
+import chinese_flag from "../../images/chinese_flag.gif"
+import english_flag from "../../images/english_flag.gif"
+import spanish_flag from "../../images/spanish_flag.gif"
+
+import '../../index.scss'
 
 import PropTypes from 'prop-types'
 
-export default class HeaderBannerComponent extends PureComponent {
+export default class HeaderBanner extends PureComponent {
   static propTypes = {
     isLoggedIn: PropTypes.bool,
     onSignOut: PropTypes.func,
@@ -13,26 +19,46 @@ export default class HeaderBannerComponent extends PureComponent {
 
     return (
       <div>
-        <table style="margin-left: 48px">
-          <tr>
-            <td>
-              <div class="logo-header">
-                <a href="?go=overview">
-                  <img class="logo" src="images/logo.png" width="320px" alt="TheoryMine"/>
+        <h1 className="site-heading pr-5 pl-5 d-none d-lg-block">
+          <span className="site-heading-lower">
+            <a href="/">
+                  <img className="logo" src={logo} width="320px" alt="TheoryMine"/>
                   <sup>TM</sup>
                 </a>
-                <p>Personalized mathematical theorems></p>
-              </div>
-            </td>
-            <td>
-              <div class="mascots">
-                <img src="images/mathematicians_Christmas.png" align="middle" style="width:39%;"> ... you could be
-                  next! </img>
-              </div>
-            </td>
-          </tr>
-        </table>
+          </span>
+          <span className='site-heading-upper mb-3'>Personalized mathematical theorems</span>
+        </h1>
+
+        <div className="site-heading-upper text-right mr-2">
+          <a href="?lang=en"><img className="m-1" height="20px" src={english_flag} alt="english"/></a>
+          <a href="?lang=sp"><img className="m-1" height="20px" src={spanish_flag} alt="spanish"/></a>
+          <a href="?lang=cn"><img className="m-1" height="20px" src={chinese_flag} alt="chinese"/></a>
+        </div>
+        <nav className="navbar navbar-expand-lg navbar-dark py-lg-3" id="mainNav">
+
+          <div className="container">
+            <a className="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="#">Ludo e
+              Fizze</a>
+            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                    aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+              <span className="navbar-toggler-icon"></span>
+            </button>
+            <div className="collapse navbar-collapse" id="navbarResponsive">
+              <ul className="navbar-nav mx-auto">
+                <li className='nav-item px-lg-4'>
+                  <a className="nav-link text-uppercase text-expanded" href="/">Home</a>
+                </li>
+                <li className='nav-item px-lg-4'>
+                  <a className="nav-link text-uppercase text-expanded" href="/">F.A.Q.
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
       </div>
     )
   }
 }
+
