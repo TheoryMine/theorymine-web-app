@@ -4,3 +4,6 @@ export mathematicians from './mathematicians.png';
 export english_flag from './english_flag.gif';
 export spanish_flag from './spanish_flag.gif';
 export chinese_flag from './chinese_flag.gif';
+export homebackground from './homebackground.png';
+export number_button_empty from './number_button_empty.png';
+export number_button_full from './number_button_full.png';
