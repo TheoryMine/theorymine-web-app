@@ -1,15 +1,12 @@
 import React, { Component } from 'react';
 import { local } from "../../common/utils/localization"
 import infoPageBackground from "../../images/info-page-background.gif"
+import ContentPage from "./ContentPage"
 
 const Faq = () => {
 
   return (
-    <div className="content-only-page" style={{ backgroundImage: "url(" + infoPageBackground + ")" }}>
-
-      <div className='content-box mt-5'>
-        <div className='content'>
-
+    <ContentPage>
 
           <h2 className='section-heading-lower'>{local[ 'faq_sec1' ]}</h2>
           <ol className="faq_ol">
@@ -130,11 +127,7 @@ const Faq = () => {
           <h3 className="section-heading-upper" id="forever">{local[ 'faq_q20' ]}</h3>
 
           <p>{local[ 'faq_a20' ]}</p>
-
-          <a className="smalllogo" href="?go=overview"/>
-        </div>
-      </div>
-    </div>
+    </ContentPage>
   )
 }
 

@@ -7,6 +7,7 @@ import history from "./common/history"
 import Home from "./pages/home/Home"
 import HeaderBanner from "./common/banners/HeaderBanner"
 import Faq from "./pages/content-only/Faq"
+import About from "./pages/content-only/AboutUs"
 
 class App extends Component {
   static displayName = 'App';
@@ -25,6 +26,7 @@ class App extends Component {
             <Switch>
               <Route exact name='Home Page' path='/' component={Home}/>
               <Route  name='F.A.Q.' path='/faq' component={Faq}/>
+              <Route  name='About' path='/about' component={About}/>
               <Redirect to='/'/>
             </Switch>
           </Fragment>

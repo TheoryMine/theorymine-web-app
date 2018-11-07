@@ -8,3 +8,7 @@ export homebackground from './homebackground.png';
 export number_button_empty from './number_button_empty.png';
 export number_button_full from './number_button_full.png';
 export info_page_background from './info-page-background.gif';
+export lucas_dixon from './lucas_dixon.JPG';
+export moa_johannson from './moa_johannson.jpg';
+export alan_bundy from './alan_bundy.jpg';
+export flaminia_cavallo from './flaminia_cavallo4.jpg';
