@@ -1,6 +1,5 @@
 import React, { PureComponent } from 'react'
 import logo from "../../images/logo.png"
-import mathematicians from "../../images/mathematicians.png"
 import chinese_flag from "../../images/chinese_flag.gif"
 import english_flag from "../../images/english_flag.gif"
 import spanish_flag from "../../images/spanish_flag.gif"

@@ -58,7 +58,7 @@ module.exports = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
-      title: 'XDreams Portal',
+      title: 'TheoryMine',
       template: path.resolve('./src/index.html'),
       alwaysWriteToDisk: true,
     }),

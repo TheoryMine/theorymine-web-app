@@ -70,7 +70,7 @@ module.exports = {
     extractScss,
     new UglifyJSPlugin(),
     new HtmlWebpackPlugin({
-      title: 'XDreams Portal',
+      title: 'TheoryMine',
       template: path.resolve('./src/index.html'),
     }),
     new webpack.DefinePlugin({
