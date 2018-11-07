@@ -9,6 +9,7 @@ import HeaderBanner from "./common/banners/HeaderBanner"
 import Faq from "./pages/content-only/Faq"
 import About from "./pages/content-only/AboutUs"
 import GiftPacks from "./pages/content-only/GiftPacks"
+import Testimonials from "./pages/content-only/Testimonials"
 
 class App extends Component {
   static displayName = 'App';
@@ -29,6 +30,7 @@ class App extends Component {
               <Route  name='F.A.Q.' path='/faq' component={Faq}/>
               <Route  name='About' path='/about' component={About}/>
               <Route  name='Gifts' path='/gifts' component={GiftPacks}/>
+              <Route  name='Testimonials' path='/testimonials' component={Testimonials}/>
               <Redirect to='/'/>
             </Switch>
           </Fragment>

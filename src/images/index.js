@@ -16,3 +16,5 @@ export theorymine_mousepad from './theorymine_mousepad.jpg';
 export theorymine_mug from './theorymine_mug.jpg';
 export theorymine_t_shirt2 from './theorymine_t_shirt2.jpg';
 export theorymine_tshirt1 from './theorymine_tshirt1.jpg';
+export anne_glover_small from './anne_glover_small.jpg';
+export neds_theorem from './neds_theorem.jpg';

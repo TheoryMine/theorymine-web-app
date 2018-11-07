@@ -63,7 +63,7 @@ export default class HeaderBanner extends PureComponent {
                   </a>
                 </li>
                 <li className='nav-item px-lg-4'>
-                  <a className="nav-link text-uppercase text-expanded" href="/">Testimonials
+                  <a className="nav-link text-uppercase text-expanded" href="/testimonials">Testimonials
                   </a>
                 </li>
               </ul>
