@@ -54,7 +54,8 @@ sup {
 
 @media (min-width: 992px) {
   .content-only-page{
-    background-position: top right;
+    background-position: bottom right;
+    background-attachment: fixed;
   }
   .content-only-page .content-box {
     width: 70%;
