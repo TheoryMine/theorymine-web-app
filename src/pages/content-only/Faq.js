@@ -95,7 +95,7 @@ const Faq = () => {
           <h3 className="section-heading-upper" id="which_theorems">{local[ 'faq_q13' ]}</h3>
           <p>{local[ 'faq_a13' ]}</p>
           <p>
-            <a href="?go=certificate_example">Click here</a> to view an example of a theorem and a detailed
+            <a href="/certificate_example">Click here</a> to view an example of a theorem and a detailed
             explanation.
           </p>
           <h3 className="section-heading-upper" id="proof_fine">{local[ 'faq_q14' ]}</h3>
