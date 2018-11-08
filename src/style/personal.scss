@@ -27,42 +27,50 @@ sup {
   justify-content: center;
 }
 
-.step{
+.step {
   border: 2px solid #b4975a;
   background-color: white;
   font-size: medium;
   width: 25%;
 }
 
-.step a{
+.step a {
   color: black;
   text-decoration: none;
 }
-.step-number{
+
+.step-number {
   font-family: sans-serif;
   font-size: 23px;
   padding: 3px 13px 3px 14px;
 }
 
-.content-only-page{
+.content-only-page {
   padding: 5px;
-  background-repeat: no-repeat;
-  background-position: top right;
   margin-top: 4px;
+  background-repeat: no-repeat;
+  background-position: -1000px -1000px;
 }
 
-.content-only-page .content-box{
+@media (min-width: 992px) {
+  .content-only-page{
+    background-position: top right;
+  }
+  .content-only-page .content-box {
     width: 70%;
   }
+}
 
-.content-only-page .content a{
+.content-only-page .content a {
   color: #b4975a;
 }
-.content-only-page .content img{
+
+.content-only-page .content img {
   height: 100px;
   margin: 10px;
 }
-.content-only-page .content{
+
+.content-only-page .content {
   font-size: 14px;
   width: 90%;
   margin-left: auto;
@@ -71,11 +79,12 @@ sup {
   border-left: 2px solid #b4975a;
   padding: 15px;
 }
-.testimonial img{
-  float:right;
+
+.testimonial img {
+  float: right;
 }
 
-.footer-banner{
+.footer-banner {
   border-top: 2px solid #b4975a;
   font-size: 12px;
 }
