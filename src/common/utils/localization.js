@@ -4,7 +4,7 @@ const localisation = {
   'EN-GB': {
     overview_title: <p>TheoryMine lets you name a personalised, newly discovered, mathematical theorems as a novelty
       gift.</p>,
-    overview_tagline: <p>Name your very own mathematical theorem, newly discovered by one of the world\'s most advanced
+    overview_tagline: <p>Name your very own mathematical theorem, newly discovered by one of the world's most advanced
       computerised theorem provers (a kind of robot mathematician), and you can immortalise your loved ones, teachers,
       friends and even yourself and your favourite pets.</p>,
     overview_see_example: <p>See an example theorem certificate</p>,
@@ -17,7 +17,7 @@ const localisation = {
     overview_get_started: <p>Get Started:</p>,
     overview_choose: <p>Choose your Theorem Name</p>,
     overview_preview: <p>Preview your theorem!</p>,
-    overview_eg: <p>e.g. Tom\'s theorem, or The Bucklesham lemma</p>,
+    overview_eg: <p>e.g. Tom's theorem, or The Bucklesham lemma</p>,
 
     //page_discover
 
@@ -40,7 +40,7 @@ const localisation = {
       theorem name in "special instructions to seller section, and we will send you a newly discovered theorem within 7
       business days.</p>,
     discover_choose: <p>Choose your Theorem Name:</p>,
-    discover_eg: <p>e.g. Tom\'s theorem, or The Bucklesham lemma</p>,
+    discover_eg: <p>e.g. Tom's theorem, or The Bucklesham lemma</p>,
     discover_tc1: <p>I have read and accept the</p>,
     discover_tc2: <p>Terms and Conditions of the TheoryMine website</p>,
     discover_sub1: <p>Once your order has been placed, you will receive a user name and password to</p>,
@@ -72,7 +72,7 @@ const localisation = {
     faq_q5: <p>CAN I CHANGE THE NAME OF MY THEOREM AFTER IT HAS BEEN PURCHASED?</p>,
     faq_q6: <p>WHAT CAN I CALL A THEOREM?</p>,
     faq_q7: <p>WHICH METHODS OF PAYMENT DO YOU ACCEPT?</p>,
-    faq_q8: <p>WHY HASN\'T MY THEOREM ARRIVED BY THE DEADLINE YOU PROMISED?</p>,
+    faq_q8: <p>WHY HASN'T MY THEOREM ARRIVED BY THE DEADLINE YOU PROMISED?</p>,
     faq_q9: <p>WHY IS MY CERTIFICATE NOT FORMATTED CORRECTLY?</p>,
     faq_q10: <p>WHAT IS A THEORY?</p>,
     faq_q11: <p>WHAT IS A THEOREM?</p>,
@@ -105,7 +105,7 @@ const localisation = {
       defamatory, blasphemous, obscene, offensive to public morality or an incitement to racial hatred or
       terrorism.</p>,
     faq_a7: <p>Payments are carried out on our behalf by PayPal, one of the most popular, secure and established payment
-      gateways. PayPal\'s pages offer the highest level of security and encryption. Users should be reassured by the
+      gateways. PayPal's pages offer the highest level of security and encryption. Users should be reassured by the
       internet standard padlock symbol which will be displayed whilst you are entering your card details. We do not hold
       or see your card details as these are processed directly by PayPal.</p>,
     faq_a8: <p>Note that if you are not logged into your account when you purchase from our website, your notification
@@ -131,7 +131,7 @@ const localisation = {
       from the previous formulae in the sequence. All the axioms in TheoryMine theories are recursive definitions.</p>,
     faq_a12: <p>>Recursion is a mathematical technique that is much
       used in computer programs. In a recursive definition, the value of a recursive function is defined in terms of
-      values of the same function applied to smaller inputs. This sounds circular, but because the function\'s inputs
+      values of the same function applied to smaller inputs. This sounds circular, but because the function's inputs
       get smaller and smaller the computation eventually stops.TheoryMine also uses recursion to define brand new types
       of input and output for each theory.These are called recursive objects. </p>,
     faq_a13: <p>TheoryMine proves properties of functions. For instance, when it comes to addition, it does not matter
@@ -156,13 +156,13 @@ const localisation = {
     faq_a17: <p>There are two senses in which your theorem is not trivially true. Firstly, note that some mathematical
       theories are inconsistent i.e. the axioms contradict each other. In such theories all formulae are theorems, which
       is clearly undesirable. However, it is a well-established mathematical result that theories consisting only of
-      recursive definitions, as TheoryMine\'s theories are, are inherently consistent. So you can be sure that your
+      recursive definitions, as TheoryMine's theories are, are inherently consistent. So you can be sure that your
       theorem is not trivial in this sense. The second sense in which these theorems are not trivially true is that they
       cannot be directly derived by a simple calculation. In particular, they are not true by simple rewriting from
       other known theorems, as described in more detail in the answer to the question: <a href="#interesting">IS MY
         THEOREM INTERESTING?</a>.</p>,
     faq_a18: <p>TheoryMine applies a series of filters to remove uninteresting theorems before it generates them. On the
-      other hand, don\'t expect your theorem to earn you the Fields Medal! (the Nobel Prize of Mathematics). In
+      other hand, don't expect your theorem to earn you the Fields Medal! (the Nobel Prize of Mathematics). In
       particular, we use the notion of interesting initially developed in <a
         href="http://www.springerlink.com/content/bk711q2u247mr967">Conjecture Synthesis for Inductive Theories (Journal
         of Automated Reasoning)</a> which was then further developed in <a
@@ -173,7 +173,7 @@ const localisation = {
       name it. TheoryMine assigns that authority to you.</p>,
     faq_a20: <p>A theorem, once proved, stays proved for ever. The reasoning in the proof is deductive, so contains no
       element of probability or uncertainty. Theorems are abstract objects that are not subject to wear and tear. Even
-      diamonds will be destroyed in the heat death of the universe; theorems won\'t be.</p>,
+      diamonds will be destroyed in the heat death of the universe; theorems won't be.</p>,
 
     //about
 
@@ -237,16 +237,16 @@ const localisation = {
     tes_title: <p>Testimonials:</p>,
     tes_p1: <p>"This really captured my imagination and I&#39;m delighted to buy TheoryMine&#39;s first Theorem. What an
       inventive use of Scotland&#39;s expertise in artificial intelligence to create such a novel and fun product"</p>,
-    tes_p2: <p>"During my time as an eager undergraduate mathematician, I\'d often wonder what it would feel like to
+    tes_p2: <p>"During my time as an eager undergraduate mathematician, I'd often wonder what it would feel like to
       prove a truly new result and have my name immortalised in the mathematical history books. I thought that dream had
-      died when I gave up maths to become a science writer, but Aron\'s theorem is now a reality"</p>,
+      died when I gave up maths to become a science writer, but Aron's theorem is now a reality"</p>,
     tes_p3: <p>"This is a superb example of innovation and creation."</p>,
     tes_p4: <p>"The theorems start at &pound;15 each; &pound;20 cheaper than changing your name to Pythagoras by deed
       poll"</p>,
-    tes_p5: <p>"This year\'s naming gift is this ingenious (or possibly even genius) one."</p>,
+    tes_p5: <p>"This year's naming gift is this ingenious (or possibly even genius) one."</p>,
     tes_p6: <p>"It&#39;s never too early to start enjoying maths, and this is a present that will last a
       lifetime."</p>,
-    tes_p7: <p>Listen to BBC\'s Material World Interview</p>,
+    tes_p7: <p>Listen to BBC's Material World Interview</p>,
 
     //Abuse
 
@@ -375,7 +375,7 @@ const localisation = {
     login_resetpassword: <p>reset your password</p>,
     login_waiting_email: <p>You need to read your email, you have been emailed a link that you need in order to
       login.</p>,
-    login_noaccount: <p>/p>Don\'t have an account?</p>,
+    login_noaccount: <p>/p>Don't have an account?</p>,
     login_pass_forgot: <p>forgot your password? </p>,
 
     //register
@@ -435,10 +435,10 @@ const localisation = {
 
     //footer
 
-    footer_tc: <p>Terms & Conditions</p>,
-    footer_contact: <p>Contact Us</p>,
-    footer_privacy: <p>Privacy Policy</p>,
-    footer_cancellations: <p>Cancellations</p>,
+    footer_tc: 'Terms & Conditions',
+    footer_contact: 'Contact Us',
+    footer_privacy: 'Privacy Policy',
+    footer_cancellations: 'Cancellations',
     footer_questions: <p>Got a question about TheoryMine? Email us at </p>,
 
     //header
