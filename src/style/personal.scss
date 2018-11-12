@@ -4,6 +4,13 @@ sup {
   float: bottom;
 }
 
+button{
+  padding: 8px 24px;
+  background-color: #b4975a59;
+  font-weight: 500;
+  border-radius: 16px;
+}
+
 .home-page {
   background-repeat: no-repeat;
   background-position: top right;
@@ -11,10 +18,14 @@ sup {
 }
 
 .description-box {
-  width: 50%;
+  width: 60%;
   margin: auto;
   text-align: center;
   font-size: 16px;
+}
+
+.description-box-small {
+  font-size: 12px;
 }
 
 .description-box p {
@@ -25,6 +36,12 @@ sup {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+input {
+  height: 40px;
+  width: 80%;
+  border: 1.5px solid #b4975a70;
 }
 
 .step {
@@ -88,4 +105,39 @@ sup {
 .footer-banner {
   border-top: 2px solid #b4975a;
   font-size: 12px;
+}
+
+.questionMark {
+  text-decoration: none;
+  position: relative;
+}
+
+.questionMark:hover{
+  background-color: transparent;
+  z-index: 50;
+}
+
+.questionMark span{
+  text-align: left;
+  text-decoration: none;
+  color: black;
+  font-size: 10pt;
+  position: absolute;
+  background-color: white;
+  padding: 7px;
+  left: -9000px;
+  border: 2px outset black;
+  visibility: hidden;
+  width: 300px;
+}
+
+.questionMark span img{
+  border-width: 0;
+  padding: 2px;
+}
+
+.questionMark:hover span{
+  visibility: visible;
+  left: -280px;
+  top: 20px;
 }

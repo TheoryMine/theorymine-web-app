@@ -18,3 +18,4 @@ export theorymine_t_shirt2 from './theorymine_t_shirt2.jpg';
 export theorymine_tshirt1 from './theorymine_tshirt1.jpg';
 export anne_glover_small from './anne_glover_small.jpg';
 export neds_theorem from './neds_theorem.jpg';
+export question_icon from './question_icon.png';
