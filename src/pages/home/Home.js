@@ -12,7 +12,6 @@ export default class Home extends Component {
       { number: "3", name: 'THEY get a great gift', link: '/' }
     ]
 
-
     const stepBoxes = steps.map(step => <Step {...step} key={step.number}/>)
 
     return (
@@ -32,6 +31,11 @@ export default class Home extends Component {
 
         <div className="steps">
           {stepBoxes}
+        </div>
+        <div className='description-box mt-5 mb-5'>
+          <a href='/discover'>
+            <button className='intro-button pl-5 pr-5 large' type='submit'>Get Started</button>
+          </a>
         </div>
 
       </div>
