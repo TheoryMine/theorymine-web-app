@@ -24,7 +24,6 @@ export default class BuyTheorem extends Component {
 
 
               <input
-                className='m-4'
                 id='theoremName'
                 type='text'/>
               <p>{local[ 'overview_eg' ]}</p>
