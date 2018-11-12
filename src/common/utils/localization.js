@@ -21,7 +21,7 @@ const localisation = {
 
     //page_discover
 
-    discover_title: 'Discover and name a new theorem',
+    discover_title: 'Name a new theorem',
     discover_15: <span>Only &pound;15.00</span>,
     discover_imagetag: <span>*This is just an illustration, it is not the certificate that you will receive.</span>,
     discover_part1: 'By placing an order with TheoryMine, you name a newly discovered mathematical theorem. This lets you immortalise your loved ones, teachers, friends and even yourself and your favourite pets! It may take upto 6 working days (excluding weekends) for our robot mathematicians to discover your theorem. We do NOT send printed copies. Once discovered we will send you a notification by email that your theorem is ready with links to let you download a certificate of the discovery.',
