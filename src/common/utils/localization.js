@@ -510,6 +510,12 @@ const localisation = {
     ,
     update: "Update my details",
 
+
+  ///*******ERRORS*************/
+  //
+
+  err_empty: 'Please enter a value for this field'
+
   }
 }
 

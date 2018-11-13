@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
 import { local } from "../../common/utils/localization"
 import questionIcon from "../../images/question_icon.png"
+import ValidatingInput from "../../common/forms/ValidatingInput"
+import QuestionMark from "./QuestionMark"
+import { formFieldValidators } from "../../common/forms/formFieldValidators"
 
 export default class BuyTheorem extends Component {
 
   render () {
+
+    const formId = 'discoverTheorem'
 
     return (
       <div>
@@ -12,19 +17,15 @@ export default class BuyTheorem extends Component {
           <h2 className="mb-4 mt-4">
             <span className="section-heading-lower">{local[ 'discover_title' ]}: £15</span>
           </h2>
+
           <div className='border p-3'>
-            <form>
+            <form id={formId}>
               <h2 className="section-heading-upper">{local[ 'overview_get_started' ]}</h2>
-                <p>{local[ 'overview_choose' ]}
-                  <a className='questionMark m-2'>
-                    <img src={questionIcon} alt="?" width="15" height="15"/>
-                    {local[ 'questionmark' ]}
-                  </a>
-                </p>
-
-
-              <input
+              <QuestionMark />
+              <ValidatingInput
                 id='theoremName'
+                formId={formId}
+                validators={[formFieldValidators.isNotEmpty]}
                 type='text'/>
               <p>{local[ 'overview_eg' ]}</p>
               <button className='intro-button' type='submit'>Next</button>
