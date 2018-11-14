@@ -8,6 +8,5 @@ export const mapStateToProps = state => {
   }
 }
 
-
 const CheckoutContainer = connect(mapStateToProps, null)(Checkout)
 export default CheckoutContainer

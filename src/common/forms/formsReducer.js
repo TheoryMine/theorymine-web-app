@@ -15,6 +15,7 @@ export const formsReducer = handleActions(
         ...state,
         [formName]: {
           ...formSoFar,
+          isFormValid: null,
           [fieldName]: {
             validators: action.payload.validators || [],
             notification: null,
@@ -34,6 +35,7 @@ export const formsReducer = handleActions(
           ...state,
           [formName]: {
             ...formSoFar,
+            isFormValid: null,
             [fieldName]: {
               ...fieldSoFar,
               value: action.payload.newValue,
@@ -55,14 +57,16 @@ export const formsReducer = handleActions(
       const value = fieldSoFar.value || null
       const validatorsResults = validators.map(v => v(value))
       const firstInvalidValidator = validatorsResults.find(r => !r.isValid)
+      const isFieldValid = isNil(firstInvalidValidator)
       if (!isNil(fieldSoFar)) {
         return {
           ...state,
           [formName]: {
             ...formSoFar,
+            isFormValid: isNil(formSoFar.isFormValid) ? isFieldValid : formSoFar.isFormValid && formSoFar.isFormValid,
             [fieldName]: {
               ...fieldSoFar,
-              isValid: isNil(firstInvalidValidator),
+              isValid: isFieldValid,
               notification: firstInvalidValidator ? {
                 message: firstInvalidValidator.message,
                 level: firstInvalidValidator.level
