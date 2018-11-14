@@ -1,8 +1,6 @@
 import { connect } from 'react-redux'
 
-import { Validating } from "./Validating"
-import { fieldChanged, fieldInitialised, formSubmitted, validateFieldValue } from "./formsActions"
-import { getFormFieldNotification, isFormsFieldValidOrNotPresent } from "./formsSelectors"
+import { formSubmitted } from "./formsActions"
 import ValidatingForm from "./ValidatingForm"
 
 export const mapStateToProps = (state, ownProps) => {
@@ -11,7 +9,7 @@ export const mapStateToProps = (state, ownProps) => {
 
 export const mapDispatchToProps = (dispatch, ownProps) => {
   return {
-    onSubmit: () => dispatch(formSubmitted({ nextAction: ownProps.onSubmitAction }))
+    onSubmit: () => dispatch(formSubmitted({ nextAction: ownProps.onSubmitAction, formid: ownProps.formid }))
   }
 }
 

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 
 import { local } from "../../common/utils/localization"
 import ValidatingInput from "../../common/forms/ValidatingInput"

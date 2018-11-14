@@ -2,11 +2,11 @@ import { connect } from 'react-redux'
 
 import { Validating } from "./Validating"
 import { fieldChanged, fieldInitialised, validateFieldValue } from "./formsActions"
-import { getFormFieldNotification, isFormsFieldValidOrNotPresent } from "./formsSelectors"
+import { getFormFieldNotification, isFormFieldValidOrNotPresent } from "./formsSelectors"
 
 export const mapStateToProps = (state, ownProps) => {
   return {
-    isValid: isFormsFieldValidOrNotPresent({ formName: ownProps.formid, fieldName: ownProps.id })(state),
+    isValid: isFormFieldValidOrNotPresent({ formName: ownProps.formid, fieldName: ownProps.id })(state),
     notification: getFormFieldNotification({ formName: ownProps.formid, fieldName: ownProps.id })(state),
   }
 }
