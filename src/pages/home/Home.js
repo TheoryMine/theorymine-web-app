@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
 import homeBackground from "../../images/homebackground.png"
-import Step from "./Step"
+import Step from "./StepContainer"
+import { pagesUrls } from "../../common/navigation/navigationConstants"
 
 export default class Home extends Component {
 
   render () {
 
     const steps = [
-      { number: "1", name: 'YOU choose a name', link: '/' },
-      { number: "2", name: 'WE discover a theorem', link: '/' },
-      { number: "3", name: 'THEY get a great gift', link: '/' }
+      { number: "1", name: 'YOU choose a name', redirectTo: pagesUrls.discover },
+      { number: "2", name: 'WE discover a theorem', redirectTo: pagesUrls.faq },
+      { number: "3", name: 'THEY get a great gift', redirectTo: pagesUrls.gifts }
     ]
 
     const stepBoxes = steps.map(step => <Step {...step} key={step.number}/>)

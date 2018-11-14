@@ -1,3 +1,6 @@
 export const pagesUrls  = {
-  checkout: '/checkout'
+  checkout: '/checkout',
+  discover: '/discover',
+  faq: '/faq',
+  gifts: '/gifts'
 }
