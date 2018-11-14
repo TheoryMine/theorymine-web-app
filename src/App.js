@@ -16,6 +16,7 @@ import TC from "./pages/content-only/TandC"
 import PrivacyPolicy from "./pages/content-only/PrivacyPolicy"
 import BuyTheorem from "./pages/Checkout/BuyTheoremContainer"
 import Checkout from "./pages/Checkout/CheckoutContainer"
+import CertificateExample from "./pages/content-only/CertificateExample"
 
 class App extends Component {
   static displayName = 'App';
@@ -39,6 +40,7 @@ class App extends Component {
               <Route  name='Testimonials' path='/testimonials' component={Testimonials}/>
               <Route  name='Cancellations' path='/cancellations' component={Cancellations}/>
               <Route  name='Terms ans Conditions' path='/tc' component={TC}/>
+              <Route  name='Certificate Example' path='/certificate' component={CertificateExample}/>
               <Route  name='Privacy Policy' path='/privacy' component={PrivacyPolicy}/>
               <Route  name='Discover' path='/discover' component={BuyTheorem}/>
               <Route  name='Checkout' path='/checkout' component={Checkout}/>
