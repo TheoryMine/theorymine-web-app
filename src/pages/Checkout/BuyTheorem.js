@@ -1,15 +1,29 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+
 import { local } from "../../common/utils/localization"
-import questionIcon from "../../images/question_icon.png"
 import ValidatingInput from "../../common/forms/ValidatingInput"
 import QuestionMark from "./QuestionMark"
 import { formFieldValidators } from "../../common/forms/formFieldValidators"
+import { fieldNames, formsNames } from "../../common/forms/formsAndFieldsConstants"
 
 export default class BuyTheorem extends Component {
+  static propsTypes = {
+    goToCheckout: PropTypes.func,
+  }
+
+  static defaultProps = {
+    goToCheckout: () => {},
+  }
+
+  handleSubmit = event => {
+    event.preventDefault()
+    this.props.goToCheckout()
+  }
 
   render () {
 
-    const formId = 'discoverTheorem'
+    const formId = formsNames.discover
 
     return (
       <div>
@@ -19,11 +33,11 @@ export default class BuyTheorem extends Component {
           </h2>
 
           <div className='border p-3'>
-            <form id={formId}>
+            <form id={formId} onSubmit={this.handleSubmit}>
               <h2 className="section-heading-upper">{local[ 'overview_get_started' ]}</h2>
               <QuestionMark />
               <ValidatingInput
-                id='theoremName'
+                id={fieldNames.theoremName}
                 formId={formId}
                 validators={[formFieldValidators.isNotEmpty]}
                 type='text'/>

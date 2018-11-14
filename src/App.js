@@ -14,7 +14,8 @@ import FooterBanner from "./common/banners/FooterBanner"
 import Cancellations from "./pages/content-only/Cancellations"
 import TC from "./pages/content-only/TandC"
 import PrivacyPolicy from "./pages/content-only/PrivacyPolicy"
-import BuyTheorem from "./pages/Checkout/BuyTheorem"
+import BuyTheorem from "./pages/Checkout/BuyTheoremContainer"
+import Checkout from "./pages/Checkout/CheckoutContainer"
 
 class App extends Component {
   static displayName = 'App';
@@ -40,6 +41,7 @@ class App extends Component {
               <Route  name='Terms ans Conditions' path='/tc' component={TC}/>
               <Route  name='Privacy Policy' path='/privacy' component={PrivacyPolicy}/>
               <Route  name='Discover' path='/discover' component={BuyTheorem}/>
+              <Route  name='Checkout' path='/checkout' component={Checkout}/>
               <Redirect to='/'/>
             </Switch>
             <FooterBanner/>
