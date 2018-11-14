@@ -14,7 +14,7 @@ import FooterBanner from "./common/banners/FooterBanner"
 import Cancellations from "./pages/content-only/Cancellations"
 import TC from "./pages/content-only/TandC"
 import PrivacyPolicy from "./pages/content-only/PrivacyPolicy"
-import BuyTheorem from "./pages/Checkout/BuyTheoremContainer"
+import BuyTheorem from "./pages/Checkout/BuyTheorem"
 import Checkout from "./pages/Checkout/CheckoutContainer"
 import CertificateExample from "./pages/content-only/CertificateExample"
 

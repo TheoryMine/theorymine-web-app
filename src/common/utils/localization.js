@@ -509,6 +509,8 @@ const localisation = {
       <span>Change Password</span>
     ,
     update: "Update my details",
+    submit: 'Submit',
+    next: 'Next',
 
 
   ///*******ERRORS*************/

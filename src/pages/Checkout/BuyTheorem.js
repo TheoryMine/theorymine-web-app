@@ -8,21 +8,10 @@ import { formFieldValidators } from "../../common/forms/formFieldValidators"
 import { fieldNames, formsNames } from "../../common/forms/formsAndFieldsConstants"
 import { Link } from "react-router-dom"
 import { pagesUrls } from "../../common/navigation/navigationConstants"
+import ValidatingForm from "../../common/forms/ValidatingFormContainer"
+import { redirect } from "../../common/navigation/navigationActions"
 
 export default class BuyTheorem extends Component {
-  static propsTypes = {
-    goToCheckout: PropTypes.func,
-  }
-
-  static defaultProps = {
-    goToCheckout: () => {},
-  }
-
-  handleSubmit = event => {
-    event.preventDefault()
-    this.props.goToCheckout()
-  }
-
   render () {
 
     const formId = formsNames.discover
@@ -35,17 +24,19 @@ export default class BuyTheorem extends Component {
           </h2>
 
           <div className='border p-3'>
-            <form id={formId} onSubmit={this.handleSubmit}>
+            <ValidatingForm
+              formId={formId}
+              buttonText={local.next}
+              onSubmitAction={{ action: redirect, payload: { to: pagesUrls.checkout } }}>
               <h2 className="section-heading-upper">{local[ 'overview_get_started' ]}</h2>
-              <QuestionMark />
+              <QuestionMark/>
               <ValidatingInput
                 id={fieldNames.theoremName}
-                formId={formId}
-                validators={[formFieldValidators.isNotEmpty]}
+                formId={formsNames.discover}
+                validators={[ formFieldValidators.isNotEmpty ]}
                 type='text'/>
               <p>{local[ 'overview_eg' ]}</p>
-              <button className='intro-button' type='submit'>Next</button>
-            </form>
+            </ValidatingForm>
           </div>
 
         </div>
