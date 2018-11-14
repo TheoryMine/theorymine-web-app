@@ -28,10 +28,10 @@ class CheckoutPayment extends Component {
   }
 
   render () {
-    const formId = 'payTheorem'
+    const formid = 'payTheorem'
 
     return (
-      <form id={formId} className='tm-form' onSubmit={this.handleSubmit}>
+      <form id={formid} className='tm-form' onSubmit={this.handleSubmit}>
 
         <div className="tm-form-row">
 

@@ -14,7 +14,7 @@ import { redirect } from "../../common/navigation/navigationActions"
 export default class BuyTheorem extends Component {
   render () {
 
-    const formId = formsNames.discover
+    const formid = formsNames.discover
 
     return (
       <div>
@@ -25,14 +25,13 @@ export default class BuyTheorem extends Component {
 
           <div className='border p-3'>
             <ValidatingForm
-              formId={formId}
+              formid={formid}
               buttonText={local.next}
               onSubmitAction={{ action: redirect, payload: { to: pagesUrls.checkout } }}>
               <h2 className="section-heading-upper">{local[ 'overview_get_started' ]}</h2>
               <QuestionMark/>
               <ValidatingInput
                 id={fieldNames.theoremName}
-                formId={formsNames.discover}
                 validators={[ formFieldValidators.isNotEmpty ]}
                 type='text'/>
               <p>{local[ 'overview_eg' ]}</p>

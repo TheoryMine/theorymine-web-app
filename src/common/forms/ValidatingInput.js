@@ -5,11 +5,11 @@ import ValidatingContainer from "./ValidatingContainer"
 export class Input extends PureComponent {
   static propTypes = {
     id: PropTypes.string.isRequired,
-    formId: PropTypes.string.isRequired,
+    formid: PropTypes.string.isRequired,
     validators: PropTypes.array
   }
   render() {
-    const { formId, validators, isValid, onInitialization, recordValue, validateValue, ...inputProps } = this.props;
+    const { formid, validators, isValid, onInitialization, recordValue, validateValue, ...inputProps } = this.props;
     return (
         <input
           {...inputProps}

@@ -6,25 +6,25 @@ import { getFormFieldNotification, isFormsFieldValidOrNotPresent } from "./forms
 
 export const mapStateToProps = (state, ownProps) => {
   return {
-    isValid: isFormsFieldValidOrNotPresent({ formName: ownProps.formId, fieldName: ownProps.id })(state),
-    notification: getFormFieldNotification({ formName: ownProps.formId, fieldName: ownProps.id })(state),
+    isValid: isFormsFieldValidOrNotPresent({ formName: ownProps.formid, fieldName: ownProps.id })(state),
+    notification: getFormFieldNotification({ formName: ownProps.formid, fieldName: ownProps.id })(state),
   }
 }
 
 export const mapDispatchToProps = (dispatch, ownProps) => {
   return {
     onInitialization: field => dispatch(fieldInitialised({
-      formName: ownProps.formId, fieldName: ownProps.id,
+      formName: ownProps.formid, fieldName: ownProps.id,
       validators: ownProps.validators,
     })),
     recordValue: newValue => {
       dispatch(fieldChanged({
-        formName: ownProps.formId, fieldName: ownProps.id,
+        formName: ownProps.formid, fieldName: ownProps.id,
         newValue
       }))
     },
     validateValue: field => {
-      dispatch(validateFieldValue({ formName: ownProps.formId, fieldName: ownProps.id }))
+      dispatch(validateFieldValue({ formName: ownProps.formid, fieldName: ownProps.id }))
     },
   }
 }
