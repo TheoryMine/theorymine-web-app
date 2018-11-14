@@ -5,5 +5,9 @@ export const pagesUrls  = {
   faq: '/faq',
   aboutUs: '/about',
   gifts: '/gifts',
-  testimonials: '/testimonials'
+  testimonials: '/testimonials',
+  certificateExample: '/certificate',
+  termsAndConditions: '/tc',
+  privacyPolicy: '/privacy',
+  cancellations: '/cancellations',
 }

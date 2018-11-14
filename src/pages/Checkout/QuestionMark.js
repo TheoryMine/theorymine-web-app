@@ -8,10 +8,10 @@ export default class QuestionMark extends Component {
 
     return (
       <p>{local[ 'overview_choose' ]}
-        <a className='questionMark m-2'>
+        <span className='questionMark m-2'>
           <img src={questionIcon} alt="?" width="15" height="15"/>
           {local[ 'questionmark' ]}
-        </a>
+        </span>
       </p>
 
 

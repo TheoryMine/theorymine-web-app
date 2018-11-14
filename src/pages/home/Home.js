@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import homeBackground from "../../images/homebackground.png"
-import Step from "./StepContainer"
+import Step from "./Step"
 import { pagesUrls } from "../../common/navigation/navigationConstants"
+import { Link } from "react-router-dom"
 
 export default class Home extends Component {
 
@@ -27,16 +28,16 @@ export default class Home extends Component {
             theorem provers (a kind of robot mathematician), and you can immortalise your loved ones, teachers, friends
             and even yourself and your favourite pets.
           </p>
-          <a href="/" className="mt-3"> See an example theorem certificate</a>
+          <Link to={pagesUrls.certificateExample} className="mt-3"> See an example theorem certificate</Link>
         </div>
 
         <div className="steps">
           {stepBoxes}
         </div>
         <div className='description-box mt-5 mb-5'>
-          <a href='/discover'>
+          <Link to={pagesUrls.discover}>
             <button className='intro-button pl-5 pr-5 large' type='submit'>Get Started</button>
-          </a>
+          </Link>
         </div>
 
       </div>

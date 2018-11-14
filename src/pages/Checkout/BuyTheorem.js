@@ -6,6 +6,8 @@ import ValidatingInput from "../../common/forms/ValidatingInput"
 import QuestionMark from "./QuestionMark"
 import { formFieldValidators } from "../../common/forms/formFieldValidators"
 import { fieldNames, formsNames } from "../../common/forms/formsAndFieldsConstants"
+import { Link } from "react-router-dom"
+import { pagesUrls } from "../../common/navigation/navigationConstants"
 
 export default class BuyTheorem extends Component {
   static propsTypes = {
@@ -49,8 +51,7 @@ export default class BuyTheorem extends Component {
         </div>
         <div className="small description-box description-box-small mt-4">
           <p className="mb-0">{local[ 'discover_part1' ]}</p>
-          <a href="/" className="mt-3"> See an example theorem certificate</a>
-
+          <Link to={pagesUrls.certificateExample} className="mt-3"> See an example theorem certificate</Link>
           <p className="mb-0">{local[ 'discover_part2' ]}</p>
         </div>
 

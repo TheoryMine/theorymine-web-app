@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { local } from "../../common/utils/localization"
 import infoPageBackground from "../../images/info-page-background.gif"
 import ContentPage from "./ContentPage"
+import { Link } from "react-router-dom"
+import { pagesUrls } from "../../common/navigation/navigationConstants"
 
 const Faq = () => {
 
@@ -95,7 +97,7 @@ const Faq = () => {
           <h3 className="section-heading-upper" id="which_theorems">{local[ 'faq_q13' ]}</h3>
           <p>{local[ 'faq_a13' ]}</p>
           <p>
-            <a href="/certificate_example">Click here</a> to view an example of a theorem and a detailed
+            <Link to={pagesUrls.certificateExample}>Click here</Link> to view an example of a theorem and a detailed
             explanation.
           </p>
           <h3 className="section-heading-upper" id="proof_fine">{local[ 'faq_q14' ]}</h3>
