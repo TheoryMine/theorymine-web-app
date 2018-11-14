@@ -22,19 +22,29 @@ class CheckoutPayment extends Component {
     }
   }
 
-  render () {
+  handleSubmit = event => {
+    event.preventDefault()
+    this.props.checkout(this.props.stripe)
+  }
 
+  render () {
+    const formId = 'payTheorem'
 
     return (
+      <form id={formId} className='tm-form' onSubmit={this.handleSubmit}>
 
-      <div className="tm-form-row">
+        <div className="tm-form-row">
 
-        <label htmlFor="card-element">
-          Credit or debit card
-        </label>
-        <CardElement onChange={this.handleChange}/>
-        <div id="card-errors" className='field-notification field-notification-ERROR' role="alert">{this.state.stripeErrors}</div>
-      </div>
+          <label htmlFor="card-element">
+            Credit or debit card
+          </label>
+          <CardElement onChange={this.handleChange}/>
+          <div id="card-errors" className='field-notification field-notification-ERROR'
+               role="alert">{this.state.stripeErrors}</div>
+        </div>
+        <button type='submit'>Submit Payment</button>
+
+      </form>
 
 
     );

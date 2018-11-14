@@ -1,17 +1,10 @@
 import React, { Component } from 'react';
 import { Elements, StripeProvider } from 'react-stripe-elements';
-import CheckoutPayment from "./CheckoutPayment"
+import CheckoutPayment from "./CheckoutPaymentContainer"
 
 export default class Checkout extends Component {
 
-  handleSubmit = event => {
-    event.preventDefault()
-  }
-
   render () {
-
-    const formId = 'payTheorem'
-    // Create a Stripe client.
 
     return (
       <StripeProvider apiKey="pk_test_TYooMQauvdEDq54NiTphI7jx">
@@ -23,13 +16,10 @@ export default class Checkout extends Component {
             </h2>
 
 
-            <form id={formId} className='tm-form' onSubmit={this.handleSubmit}>
-              <Elements>
-                <CheckoutPayment />
-              </Elements>
+            <Elements>
+              <CheckoutPayment/>
+            </Elements>
 
-              <button type='submit'>Submit Payment</button>
-            </form>
           </div>
 
         </div>
