@@ -445,16 +445,16 @@ const localisation = {
 
     //main_links_header
 
-    links_loggedin: <span>Logged in as </span>,
-    links_profile: <span>Profile</span>,
-    links_logout: <span>Logout</span>,
-    links_login: <span>Login</span>,
-    links_home: <span>Home Page</span>,
-    links_disc: <span>Name a Theorem</span>,
-    links_faq: <span>F.A.Q.</span>,
-    links_about: <span>About Us</span>,
-    links_gift: <span>Gift Packs</span>,
-    links_test: <span>Testimonials</span>,
+    links_loggedin: 'Logged in as ',
+    links_profile: 'Profile',
+    links_logout: 'Logout',
+    links_login: 'Login',
+    links_home: 'Home Page',
+    links_disc: 'Name a Theorem',
+    links_faq: 'F.A.Q.',
+    links_about: 'About Us',
+    links_gift: 'Gift Packs',
+    links_test: 'Testimonials',
 
     //question-mark
 

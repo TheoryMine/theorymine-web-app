@@ -1,14 +1,32 @@
 import React, { PureComponent } from 'react'
 import logo from "../../images/logo.png"
+
 import chinese_flag from "../../images/chinese_flag.gif"
 import english_flag from "../../images/english_flag.gif"
 import spanish_flag from "../../images/spanish_flag.gif"
 
 import '../../index.scss'
+import { pagesUrls } from "../navigation/navigationConstants"
+import { local } from "../utils/localization"
+import NavigationTab from "./NavigationTabContainer"
 
 export default class HeaderBanner extends PureComponent {
 
   render () {
+
+    const navigationTabs = [
+      { title: local.links_home, redirectTo: pagesUrls.home },
+      { title: local.links_faq, redirectTo: pagesUrls.faq },
+      { title: local.links_about, redirectTo: pagesUrls.aboutUs },
+      { title: local.links_gift, redirectTo: pagesUrls.gifts },
+      { title: local.links_test, redirectTo: pagesUrls.testimonials },
+    ]
+
+    const clickableNavigationTabs = navigationTabs.map(tab => (
+      <li className='nav-item px-lg-4' key={tab.title}>
+        <NavigationTab title={tab.title} redirectTo={tab.redirectTo}/>
+      </li>
+    ))
 
     return (
       <div>
@@ -37,29 +55,7 @@ export default class HeaderBanner extends PureComponent {
             </button>
             <div className="collapse navbar-collapse" id="navbarResponsive">
               <ul className="navbar-nav mx-auto">
-                <li className='nav-item px-lg-4'>
-                  <a className="nav-link text-uppercase text-expanded" href="/">Home</a>
-                </li>
-                <li className='nav-item px-lg-4'>
-                  <a className="nav-link text-uppercase text-expanded" href="/discover">Name a Theorem
-                  </a>
-                </li>
-                <li className='nav-item px-lg-4'>
-                  <a className="nav-link text-uppercase text-expanded" href="/faq">F.A.Q.
-                  </a>
-                </li>
-                <li className='nav-item px-lg-4'>
-                  <a className="nav-link text-uppercase text-expanded" href="/about">About us
-                  </a>
-                </li>
-                <li className='nav-item px-lg-4'>
-                  <a className="nav-link text-uppercase text-expanded" href="/gifts">Gift Packs
-                  </a>
-                </li>
-                <li className='nav-item px-lg-4'>
-                  <a className="nav-link text-uppercase text-expanded" href="/testimonials">Testimonials
-                  </a>
-                </li>
+                {clickableNavigationTabs}
               </ul>
             </div>
           </div>
