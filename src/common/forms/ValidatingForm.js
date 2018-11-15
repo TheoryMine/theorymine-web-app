@@ -1,15 +1,19 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { isNil } from 'lodash';
 
 export default class ValidatingForm extends Component {
   static propsTypes = {
     formId: PropTypes.string.isRequired,
     buttonText: PropTypes.string,
-    onSubmitAction: PropTypes.object.isRequired,
+    isFormValid: PropTypes.bool.isRequired,
+    notification: PropTypes.object,
+    onSubmitAction: PropTypes.object.isRequired
   }
 
   static defaultProps = {
-    onSubmitAction: ({action: null})
+    notification: null,
+    onSubmitAction: ({ action: null })
   }
 
   handleSubmit = event => {
@@ -18,10 +22,27 @@ export default class ValidatingForm extends Component {
   }
 
   render () {
+    const {
+      formId,
+      children,
+      isFormValid,
+      notification,
+      className = '',
+      notificationClassName = '',
+      buttonClassName = 'submit-button',
+      buttonText = 'Submit'
+    } = this.props
+    const validityClassName = isFormValid ? 'validating-form-valid' : 'validating-form-invalid'
+    const notificationClassNames = !isNil(notification)
+      ? notificationClassName+ ' validating-notification validating-notification-'+ notification.level
+      :notificationClassName + ' validating-notification'
 
-    const { formId, children, className = '', buttonClassName = 'submit-button', buttonText= 'Submit' } = this.props
+    const notificationBanner = !isNil(notification) && (<div className={notificationClassNames}>
+      {notification.message}
+    </div>)
     return (
-      <form id={formId} onSubmit={this.handleSubmit} className={className}>
+      <form id={formId} onSubmit={this.handleSubmit} className={className + ' ' + validityClassName}>
+        {notificationBanner}
         {children}
         <button className={buttonClassName} type='submit'>{buttonText}</button>
       </form>

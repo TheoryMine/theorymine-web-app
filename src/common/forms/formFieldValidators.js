@@ -1,11 +1,10 @@
-
 import { isEmpty, isNil } from 'lodash'
 import { local } from "../utils/localization"
 
 
-const notificationLevels = {
-  error: 'ERROR',
-  warning: 'WARNING',
+export const notificationLevels = {
+  error: 'error',
+  warning: 'warning',
 }
 
 export const formFieldValidators = {

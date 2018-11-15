@@ -1,6 +1,7 @@
 import { handleActions } from 'redux-actions'
 import { isNil } from 'lodash'
 import { fieldChanged, fieldInitialised, validateFieldValue } from "./formsActions"
+import { notificationLevels } from './formFieldValidators'
 
 const initialState = { }
 
@@ -23,6 +24,7 @@ export const formsReducer = handleActions(
         [formName]: {
           ...formSoFar,
           isFormValid: null,
+          formNotification: null,
           fields: updateOneField(formSoFar, fieldName, fieldNewValues)
         }
       }
@@ -44,6 +46,7 @@ export const formsReducer = handleActions(
         [formName]: {
           ...formSoFar,
           isFormValid: null,
+          formNotification: null,
           fields: updateOneField(formSoFar, fieldName, fieldNewValues)
         }
       }
@@ -69,11 +72,14 @@ export const formsReducer = handleActions(
         } : null
       }
 
+      const isFormValid = isNil(formSoFar.isFormValid) ? isFieldValid : formSoFar.isFormValid && formSoFar.isFormValid
+
       return {
         ...state,
         [formName]: {
           ...formSoFar,
-          isFormValid: isNil(formSoFar.isFormValid) ? isFieldValid : formSoFar.isFormValid && formSoFar.isFormValid,
+          isFormValid,
+          formNotification: isFormValid ? null : {message: 'Please check all of your field', level: notificationLevels.error},
           fields: updateOneField(formSoFar, fieldName, fieldNewValues)
         }
       }

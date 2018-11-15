@@ -153,19 +153,31 @@ input {
   top: 20px;
 }
 
-.field-notification-ERROR{
+.field-notification-error{
   color: #fa755a;
 }
 
-.field-ERROR{
+.field-error{
   color: #fa755a;
   border-color: #fa755a;
 }
 
-.field-notification-WARNING{
+.validating-notification-error{
+  background-color: #fa755a;
+  border-color: #fa755a;
+  color: white;
+  padding: 10px;
+}
+
+.field-notification-warning{
   color: #e6a840;
 }
 
+.validating-notification-warning{
+  background-color: #e6a840;
+  border-color: #e6a840;
+  color: white;
+}
 .StripeElement {
   background-color: white;
   height: 40px;

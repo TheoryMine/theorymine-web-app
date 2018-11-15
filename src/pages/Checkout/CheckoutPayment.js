@@ -39,7 +39,7 @@ class CheckoutPayment extends Component {
             Credit or debit card
           </label>
           <CardElement onChange={this.handleChange}/>
-          <div id="card-errors" className='field-notification field-notification-ERROR'
+          <div id="card-errors" className='field-notification field-notification-error'
                role="alert">{this.state.stripeErrors}</div>
         </div>
         <button type='submit'>Submit Payment</button>
