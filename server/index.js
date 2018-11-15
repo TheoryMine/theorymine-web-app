@@ -4,7 +4,7 @@ const app = express()
 const proxy = require('express-http-proxy')
 const fs = require('fs')
 const PORT = process.env.PORT || 8080
-const API_URL = process.env.API_URL || 'https://xdreams.herokuapp.com'
+const API_URL = process.env.API_URL || 'https://theorymine.com'
 
 if (process.env.NODE_ENV === 'development') {
   const webpack = require('webpack')

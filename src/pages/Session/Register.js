@@ -9,6 +9,7 @@ import { Link } from "react-router-dom"
 import { pagesUrls } from "../../common/navigation/navigationConstants"
 import ValidatingForm from "../../common/forms/ValidatingFormContainer"
 import { redirect } from "../../common/navigation/navigationActions"
+import { registrationRequested } from "./sessionActions"
 
 export default class Register extends Component {
   render () {
@@ -22,8 +23,7 @@ export default class Register extends Component {
           formId={formId}
           buttonText={local.register}
           onSubmitAction={{
-            action: () => {
-            },
+            action: registrationRequested,
           }}>
           <h2 className="mb-4 mt-4">
             <span className="section-heading-lower">{local[ 'register_title' ]}</span>
@@ -32,17 +32,14 @@ export default class Register extends Component {
             <label className='form-text' htmlFor={fieldNames.firstName}>{local.firstname}</label>
             <ValidatingInput
               formId={formId}
-              label={local.firstname}
               id={fieldNames.firstName}
               validators={[ formFieldValidators.isNotEmpty ]}
               type='text'/>
           </div>
-
           <div className='tm-form-row'>
             <label className='form-text' htmlFor={fieldNames.lastName}>{local.lastname}</label>
             <ValidatingInput
               formId={formId}
-              label={local.lastname}
               id={fieldNames.lastName}
               validators={[ formFieldValidators.isNotEmpty ]}
               type='text'/>
@@ -51,7 +48,6 @@ export default class Register extends Component {
             <label className='form-text' htmlFor={fieldNames.email}>{local.email}</label>
             <ValidatingInput
               formId={formId}
-              label={local.email}
               id={fieldNames.email}
               validators={[ formFieldValidators.isNotEmpty ]}
               type='text'/>
@@ -60,19 +56,17 @@ export default class Register extends Component {
             <label className='form-text' htmlFor={fieldNames.password}>{local.password}</label>
             <ValidatingInput
               formId={formId}
-              label={local.password}
               id={fieldNames.password}
               validators={[ formFieldValidators.isNotEmpty ]}
-              type='text'/>
+              type='password'/>
           </div>
           <div className='tm-form-row'>
             <label className='form-text' htmlFor={fieldNames.password2}>{local.register_retype1}</label>
             <ValidatingInput
               formId={formId}
-              label={local.register_retype1}
               id={fieldNames.password2}
               validators={[ formFieldValidators.isNotEmpty ]}
-              type='text'/>
+              type='password'/>
           </div>
         </ValidatingForm>
       </div>
