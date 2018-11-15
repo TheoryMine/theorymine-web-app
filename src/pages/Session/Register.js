@@ -9,7 +9,7 @@ import { Link } from "react-router-dom"
 import { pagesUrls } from "../../common/navigation/navigationConstants"
 import ValidatingForm from "../../common/forms/ValidatingFormContainer"
 import { redirect } from "../../common/navigation/navigationActions"
-import { registrationRequested } from "./sessionActions"
+import { registrationFailed, registrationRequested, registrationSucceeded } from "./sessionActions"
 
 export default class Register extends Component {
   render () {
@@ -22,9 +22,9 @@ export default class Register extends Component {
           className='tm-form m-4'
           formId={formId}
           buttonText={local.register}
-          onSubmitAction={{
-            action: registrationRequested,
-          }}>
+          onSubmitAction={{ action: registrationRequested, }}
+          onSuccessAction={{ action: registrationSucceeded, }}
+          onFailureAction={{ action: registrationFailed, }}>
           <h2 className="mb-4 mt-4">
             <span className="section-heading-lower">{local[ 'register_title' ]}</span>
           </h2>

@@ -13,7 +13,12 @@ export const mapStateToProps = (state, ownProps) => {
 
 export const mapDispatchToProps = (dispatch, ownProps) => {
   return {
-    onSubmit: () => dispatch(formSubmitted({ nextAction: ownProps.onSubmitAction, formId: ownProps.formId }))
+    onSubmit: () => dispatch(formSubmitted({
+      formId: ownProps.formId,
+      nextAction: ownProps.onSubmitAction,
+      onSuccessAction: ownProps.onSuccessAction || null,
+      onFailureAction: ownProps.onFailureAction || null,
+    }))
   }
 }
 

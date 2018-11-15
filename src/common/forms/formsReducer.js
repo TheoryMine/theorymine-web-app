@@ -1,9 +1,20 @@
 import { handleActions } from 'redux-actions'
 import { isNil } from 'lodash'
-import { fieldChanged, fieldInitialised, validateFieldValue } from "./formsActions"
+import {
+  fieldChanged, fieldInitialised, formInvalid, formSubmitted, formValid,
+  validateFieldValue
+} from "./formsActions"
 import { notificationLevels } from './formFieldValidators'
 
 const initialState = { }
+const updateOneField = (form, fieldToUpdate, toUpdateValues) => {
+  const fields = form.fields || {}
+  const fieldSoFar = fields[ fieldToUpdate ] || {}
+  return {
+    ...fields,
+    [fieldToUpdate]: { ...fieldSoFar, ...toUpdateValues }
+  }
+}
 
 export const formsReducer = handleActions(
   {
@@ -79,21 +90,48 @@ export const formsReducer = handleActions(
         [formName]: {
           ...formSoFar,
           isFormValid,
-          formNotification: isFormValid ? null : {message: 'Please check all of your field', level: notificationLevels.error},
           fields: updateOneField(formSoFar, fieldName, fieldNewValues)
         }
       }
 
     },
+    [formInvalid]: (state, action) =>  {
+      const formName = action.payload.formName
+      const notification = action.payload.notification || {}
+      const formSoFar = state[ formName ] || {}
+      return {
+        ...state,
+        [formName]: {
+          ...formSoFar,
+          isFormValid: false,
+          formNotification: {message: notification.message, level: notification.level},
+        }
+      }
+    },
+    [formValid]: (state, action) =>  {
+      const formName = action.payload.formName
+      const formSoFar = state[ formName ] || {}
+      return {
+        ...state,
+        [formName]: {
+          ...formSoFar,
+          isFormValid: true,
+          formNotification: null,
+        }
+      }
+    },
+    [formSubmitted]: (state, action) =>  {
+      const formName = action.payload.formName
+      const formSoFar = state[ formName ] || {}
+      return {
+        ...state,
+        [formName]: {
+          ...formSoFar,
+          isFormValid: null,
+          formNotification: null,
+        }
+      }
+    },
   },
   initialState
 )
-
-const updateOneField = (form, fieldToUpdate, toUpdateValues) => {
-  const fields = form.fields || {}
-  const fieldSoFar = fields[ fieldToUpdate ] || {}
-  return {
-    ...fields,
-    [fieldToUpdate]: { ...fieldSoFar, ...toUpdateValues }
-  }
-}

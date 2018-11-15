@@ -1,5 +1,6 @@
-import { put, select, takeLatest, all } from 'redux-saga/effects'
-import { formSubmitted, validateFieldValue } from "./formsActions"
+import { put, select, takeLatest, all, race, take } from 'redux-saga/effects'
+import { isNil } from 'lodash'
+import { formInvalid, formSubmitted, formValid, validateFieldValue } from "./formsActions"
 import { getFormFieldsNames, getFormValidity } from "./formsSelectors"
 
 export function* validateFormAndSubmit (action) {
@@ -10,9 +11,26 @@ export function* validateFormAndSubmit (action) {
 
   const formFields = yield select(getFormFieldsNames(formId))
   yield all(formFields.map(field => put(validateFieldValue({formName: formId, fieldName: field}))));
-  const isFormValid = yield select(getFormValidity(formId))
-  if (isFormValid){
+  const areFieldsValid = yield select(getFormValidity(formId))
+  if (areFieldsValid){
     yield put(onSubmitAction(onSubmitArgs))
+    yield put(formValid({formName: formId}))
+    if (action.payload.onSuccessAction && action.payload.onFailureAction){
+      const submitExit = yield race({
+        success: take(action.payload.onSuccessAction.action.toString()),
+        failure: take(action.payload.onFailureAction.action.toString())
+      })
+
+      if (!isNil(submitExit.success)){
+        yield put(formValid({formName: formId}))
+      }
+
+      else if (!isNil(submitExit.failure)){
+        const formNotification = submitExit.failure.payload.notification || null
+        yield put(formInvalid({formName: formId, notification: formNotification}))
+      }
+
+    }
   }
 }
 

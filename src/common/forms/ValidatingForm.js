@@ -8,12 +8,16 @@ export default class ValidatingForm extends Component {
     buttonText: PropTypes.string,
     isFormValid: PropTypes.bool.isRequired,
     notification: PropTypes.object,
-    onSubmitAction: PropTypes.object.isRequired
+    onSubmitAction: PropTypes.object.isRequired,
+    onSuccessAction: PropTypes.object,
+    onFailureAction: PropTypes.object,
   }
 
   static defaultProps = {
     notification: null,
-    onSubmitAction: ({ action: null })
+    onSubmitAction: ({ action: null }),
+    onSuccessAction: ({ action: null }),
+    onSuccessAction: ({ action: null }),
   }
 
   handleSubmit = event => {
