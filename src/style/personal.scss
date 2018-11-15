@@ -4,7 +4,7 @@ sup {
   float: bottom;
 }
 
-button{
+button {
   padding: 8px 24px;
   background-color: #e9e0ce;
   font-weight: 500;
@@ -55,6 +55,12 @@ input {
   border: 1.5px solid #b4975a70;
 }
 
+.checkbox-input {
+  width: auto;
+  height: auto;
+  margin: 8px;
+}
+
 .step {
   border: 2px solid #b4975a;
   background-color: white;
@@ -81,7 +87,7 @@ input {
 }
 
 @media (min-width: 992px) {
-  .content-only-page{
+  .content-only-page {
     background-position: bottom right;
     background-attachment: fixed;
   }
@@ -123,12 +129,12 @@ input {
   position: relative;
 }
 
-.questionMark:hover{
+.questionMark:hover {
   background-color: transparent;
   z-index: 50;
 }
 
-.questionMark span{
+.questionMark span {
   text-align: left;
   text-decoration: none;
   color: black;
@@ -142,42 +148,43 @@ input {
   width: 300px;
 }
 
-.questionMark span img{
+.questionMark span img {
   border-width: 0;
   padding: 2px;
 }
 
-.questionMark:hover span{
+.questionMark:hover span {
   visibility: visible;
   left: -280px;
   top: 20px;
 }
 
-.field-notification-error{
+.field-notification-error {
   color: #fa755a;
 }
 
-.field-error{
+.field-error {
   color: #fa755a;
   border-color: #fa755a;
 }
 
-.validating-notification-error{
+.validating-notification-error {
   background-color: #fa755a;
   border-color: #fa755a;
   color: white;
   padding: 10px;
 }
 
-.field-notification-warning{
+.field-notification-warning {
   color: #e6a840;
 }
 
-.validating-notification-warning{
+.validating-notification-warning {
   background-color: #e6a840;
   border-color: #e6a840;
   color: white;
 }
+
 .StripeElement {
   background-color: white;
   height: 40px;
@@ -189,7 +196,6 @@ input {
   -webkit-transition: box-shadow 150ms ease;
   transition: box-shadow 150ms ease;
 }
-
 
 .StripeElement--focus {
   box-shadow: 0 1px 3px 0 #cfd7df;
@@ -204,9 +210,9 @@ input {
 }
 
 .tm-form-row {
-  text-align:left;
+  text-align: left;
 }
 
-.submit-button{
+.submit-button {
   margin: 16px;
 }

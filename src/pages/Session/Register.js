@@ -11,6 +11,7 @@ import ValidatingForm from "../../common/forms/ValidatingFormContainer"
 import { redirect } from "../../common/navigation/navigationActions"
 import { registrationFailed, registrationRequested, registrationSucceeded } from "./sessionActions"
 import { sessionValidators } from "./sessionValidators"
+import ValidatingCheckBox from "../../common/forms/ValidatingCheckBox"
 
 export default class Register extends Component {
   render () {
@@ -73,6 +74,14 @@ export default class Register extends Component {
               id={fieldNames.password2}
               validators={[ formFieldValidators.isNotEmpty, sessionValidators.matchesOtherPassword ]}
               type='password'/>
+          </div>
+          <div className='tm-form-row'>
+            <ValidatingCheckBox
+              formId={formId}
+              id={fieldNames.acceptTerms}
+              className='checkbox-input'
+              text={local.accept_conditions}
+              validators={[ sessionValidators.tAndCAccepted ]}/>
           </div>
         </ValidatingForm>
       </div>

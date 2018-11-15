@@ -1,4 +1,6 @@
 import React, { PropTypes } from 'react'
+import { Link } from "react-router-dom"
+import { pagesUrls } from "../navigation/navigationConstants"
 
 const localisation = {
   'EN-GB': {
@@ -93,7 +95,8 @@ const localisation = {
     faq_a3: <span>Yes. You will be able to purchase additional gift packages (t-shirts, mugs and mouse mats) with your
       theorem once you have received your certificate. You can do so by logging in to your account and click on the
       "Gift Items Shop " link next to your theorem name.</span>,
-    faq_a4: <span>No. The next theorem that our robot mathematicians discover will be given the name you have chosen.</span>,
+    faq_a4:
+      <span>No. The next theorem that our robot mathematicians discover will be given the name you have chosen.</span>,
     faq_a5: <span>No. Once a name has been given to a Theorem, that is the name the theorem will have forever. However, if
       you have just ordered a theorem and your order has not been fulfilled yet, you can change your theorem name by
       emailing us at support@theorymine.co.uk</span>,
@@ -201,7 +204,8 @@ const localisation = {
     //products
 
     gift_title: <span>Gift Packs:</span>,
-    gift_p1: <span>When you name a theorem you attach your name to something that will survive throughout history.</span>,
+    gift_p1:
+      <span>When you name a theorem you attach your name to something that will survive throughout history.</span>,
     gift_p2: <span>The creation of a working mathematical theorem or law usually requires extensive work by a rare and
       brilliant mind. This gives the creator the right to have the theorem take their name; names like Gauss, Fermat and
       Pythagoras. Now anyone who wants to have their name immortalised along with the giants of maths and science can do
@@ -232,7 +236,8 @@ const localisation = {
 
     tes_title: <span>Testimonials:</span>,
     tes_p1: <span>"This really captured my imagination and I&#39;m delighted to buy TheoryMine&#39;s first Theorem. What an
-      inventive use of Scotland&#39;s expertise in artificial intelligence to create such a novel and fun product"</span>,
+      inventive use of Scotland&#39;
+      s expertise in artificial intelligence to create such a novel and fun product"</span>,
     tes_p2: <span>"During my time as an eager undergraduate mathematician, I'd often wonder what it would feel like to
       prove a truly new result and have my name immortalised in the mathematical history books. I thought that dream had
       died when I gave up maths to become a science writer, but Aron's theorem is now a reality"</span>,
@@ -514,12 +519,16 @@ const localisation = {
     update: "Update my details",
     submit: 'Submit',
     next: 'Next',
+    accept_conditions: <span>I have read and accept TheoryMine's
+      <Link to={pagesUrls.termsAndConditions}> Terms and Conditions</Link> and
+      <Link to={pagesUrls.privacyPolicy}> Privacy Policy</Link>
+    </span>,
 
+    ///*******ERRORS*************/
+    //
 
-  ///*******ERRORS*************/
-  //
-
-  err_empty: 'Please enter a value for this field'
+    err_empty: 'Please enter a value for this field',
+    err_accept_t_anc_c: 'Please agree to our Privacy Policy and Terms of Use to register.'
 
   }
 }

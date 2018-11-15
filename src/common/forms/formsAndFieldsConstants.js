@@ -10,5 +10,6 @@ export const fieldNames = {
   lastName: 'lastName',
   email: 'emailAddress',
   password: 'password',
-  password2: 'repeatedPassword'
+  password2: 'repeatedPassword',
+  acceptTerms: 'acceptedTerms',
 }

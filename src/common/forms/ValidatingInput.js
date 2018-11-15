@@ -8,12 +8,13 @@ export class Input extends PureComponent {
     formId: PropTypes.string.isRequired,
     validators: PropTypes.array
   }
-  render() {
+
+  render () {
     const { formId, validators, isValid, onInitialization, recordValue, validateValue, ...inputProps } = this.props;
     return (
-        <input
-          {...inputProps}
-        />
+      <input
+        {...inputProps}
+      />
     )
   }
 }
