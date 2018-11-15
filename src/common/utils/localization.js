@@ -523,6 +523,7 @@ const localisation = {
       <Link to={pagesUrls.termsAndConditions}> Terms and Conditions</Link> and
       <Link to={pagesUrls.privacyPolicy}> Privacy Policy</Link>
     </span>,
+    submit_payment: 'Submit Payment',
 
     ///*******ERRORS*************/
     //

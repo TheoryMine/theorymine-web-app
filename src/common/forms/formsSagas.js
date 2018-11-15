@@ -12,7 +12,7 @@ export function* validateFormAndSubmit (action) {
   const formFields = yield select(getFormFieldsNames(formId))
   yield all(formFields.map(field => put(validateFieldValue({formName: formId, fieldName: field}))));
   const areFieldsValid = yield select(getFormValidity(formId))
-  if (areFieldsValid){
+  if (areFieldsValid!= false){
     yield put(onSubmitAction(onSubmitArgs))
     if (action.payload.onSuccessAction && action.payload.onFailureAction){
       const submitExit = yield race({

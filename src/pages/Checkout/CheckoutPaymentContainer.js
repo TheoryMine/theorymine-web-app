@@ -9,11 +9,6 @@ export const mapStateToProps = state => {
   }
 }
 
-export const mapDispatchToProps = dispatch => {
-  return {
-    checkout: (stripe) => dispatch(checkoutRequested({ stripeClient: stripe })),
-  }
-}
 
-const CheckoutContainer = connect(mapStateToProps, mapDispatchToProps)(CheckoutPayment)
+const CheckoutContainer = connect(mapStateToProps, null)(CheckoutPayment)
 export default CheckoutContainer

@@ -2,13 +2,9 @@ import React, { Component } from 'react';
 
 import { local } from "../../common/utils/localization"
 import ValidatingInput from "../../common/forms/ValidatingInput"
-import QuestionMark from "../Checkout/QuestionMark"
 import { formFieldValidators } from "../../common/forms/formFieldValidators"
 import { fieldNames, formsNames } from "../../common/forms/formsAndFieldsConstants"
-import { Link } from "react-router-dom"
-import { pagesUrls } from "../../common/navigation/navigationConstants"
 import ValidatingForm from "../../common/forms/ValidatingFormContainer"
-import { redirect } from "../../common/navigation/navigationActions"
 import { registrationFailed, registrationRequested, registrationSucceeded } from "./sessionActions"
 import { sessionValidators } from "./sessionValidators"
 import ValidatingCheckBox from "../../common/forms/ValidatingCheckBox"

@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { local } from "../../common/utils/localization"
 import { CardElement, injectStripe } from 'react-stripe-elements'
+import ValidatingForm from "../../common/forms/ValidatingFormContainer"
+import { checkoutRequested } from "./checkoutActions"
 
 class CheckoutPayment extends Component {
 
@@ -22,16 +25,15 @@ class CheckoutPayment extends Component {
     }
   }
 
-  handleSubmit = event => {
-    event.preventDefault()
-    this.props.checkout(this.props.stripe)
-  }
-
   render () {
     const formId = 'payTheorem'
 
     return (
-      <form id={formId} className='tm-form' onSubmit={this.handleSubmit}>
+      <ValidatingForm
+        className='tm-form m-4'
+        formId={formId}
+        buttonText={local.submit_payment}
+        onSubmitAction={{ action: checkoutRequested, payload: { stripeClient: this.props.stripe  }}}>
 
         <div className="tm-form-row m-3">
 
@@ -42,9 +44,7 @@ class CheckoutPayment extends Component {
           <div id="card-errors" className='field-notification field-notification-error'
                role="alert">{this.state.stripeErrors}</div>
         </div>
-        <button type='submit'>Submit Payment</button>
-
-      </form>
+      </ValidatingForm>
 
 
     );

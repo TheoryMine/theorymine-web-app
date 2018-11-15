@@ -17,7 +17,7 @@ export default class ValidatingForm extends Component {
     notification: null,
     onSubmitAction: ({ action: null }),
     onSuccessAction: ({ action: null }),
-    onSuccessAction: ({ action: null }),
+    onFailureAction: ({ action: null }),
   }
 
   handleSubmit = event => {
