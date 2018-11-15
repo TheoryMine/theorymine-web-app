@@ -1,7 +1,6 @@
 import { isEmpty, isNil } from 'lodash'
 import { local } from "../utils/localization"
 
-
 export const notificationLevels = {
   error: 'error',
   warning: 'warning',

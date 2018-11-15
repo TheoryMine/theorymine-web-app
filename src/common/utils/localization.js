@@ -378,7 +378,10 @@ const localisation = {
 
     register_title: 'Register with TheoryMine',
     register_missing_entry: <span>Please fill the fields marked with * and re-enter your password.</span>,
-    register_mismatch: <span>Your passwords did not match, please re-enter it in the fields marked *.</span>,
+    register_mismatch: 'Your passwords did not match, please re-enter it',
+    register_too_short: 'Your password must be at least 8 characters long',
+    register_no_numbers: 'Your password must contain at least a number',
+    register_no_letters: 'Your password must contain at least a letter',
     register_privacy: <span>Information on how we use the personal data that you submit on our site is contained in
       our
       privacy and cookie policy</span>,

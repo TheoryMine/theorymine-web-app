@@ -10,6 +10,7 @@ import { pagesUrls } from "../../common/navigation/navigationConstants"
 import ValidatingForm from "../../common/forms/ValidatingFormContainer"
 import { redirect } from "../../common/navigation/navigationActions"
 import { registrationFailed, registrationRequested, registrationSucceeded } from "./sessionActions"
+import { sessionValidators } from "./sessionValidators"
 
 export default class Register extends Component {
   render () {
@@ -57,7 +58,12 @@ export default class Register extends Component {
             <ValidatingInput
               formId={formId}
               id={fieldNames.password}
-              validators={[ formFieldValidators.isNotEmpty ]}
+              validators={[
+                formFieldValidators.isNotEmpty,
+                sessionValidators.passwordLongEnough,
+                sessionValidators.passwordHasNumbers,
+                sessionValidators.passwordHasLetters,
+              ]}
               type='password'/>
           </div>
           <div className='tm-form-row'>
@@ -65,7 +71,7 @@ export default class Register extends Component {
             <ValidatingInput
               formId={formId}
               id={fieldNames.password2}
-              validators={[ formFieldValidators.isNotEmpty ]}
+              validators={[ formFieldValidators.isNotEmpty, sessionValidators.matchesOtherPassword ]}
               type='password'/>
           </div>
         </ValidatingForm>

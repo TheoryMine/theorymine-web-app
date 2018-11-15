@@ -71,7 +71,7 @@ export const formsReducer = handleActions(
 
       const validators = fieldSoFar.validators || []
       const value = fieldSoFar.value || null
-      const validatorsResults = validators.map(v => v(value))
+      const validatorsResults = validators.map(v => v(value, formSoFar.fields))
       const firstInvalidValidator = validatorsResults.find(r => !r.isValid)
       const isFieldValid = isNil(firstInvalidValidator)
 
@@ -96,7 +96,7 @@ export const formsReducer = handleActions(
 
     },
     [formInvalid]: (state, action) =>  {
-      const formName = action.payload.formName
+      const formName = action.payload.formId
       const notification = action.payload.notification || {}
       const formSoFar = state[ formName ] || {}
       return {
@@ -109,7 +109,7 @@ export const formsReducer = handleActions(
       }
     },
     [formValid]: (state, action) =>  {
-      const formName = action.payload.formName
+      const formName = action.payload.formId
       const formSoFar = state[ formName ] || {}
       return {
         ...state,
@@ -121,7 +121,7 @@ export const formsReducer = handleActions(
       }
     },
     [formSubmitted]: (state, action) =>  {
-      const formName = action.payload.formName
+      const formName = action.payload.formId
       const formSoFar = state[ formName ] || {}
       return {
         ...state,

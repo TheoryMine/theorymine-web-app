@@ -14,7 +14,6 @@ export function* validateFormAndSubmit (action) {
   const areFieldsValid = yield select(getFormValidity(formId))
   if (areFieldsValid){
     yield put(onSubmitAction(onSubmitArgs))
-    yield put(formValid({formName: formId}))
     if (action.payload.onSuccessAction && action.payload.onFailureAction){
       const submitExit = yield race({
         success: take(action.payload.onSuccessAction.action.toString()),
@@ -22,12 +21,12 @@ export function* validateFormAndSubmit (action) {
       })
 
       if (!isNil(submitExit.success)){
-        yield put(formValid({formName: formId}))
+        yield put(formValid({formId}))
       }
 
       else if (!isNil(submitExit.failure)){
         const formNotification = submitExit.failure.payload.notification || null
-        yield put(formInvalid({formName: formId, notification: formNotification}))
+        yield put(formInvalid({formId, notification: formNotification}))
       }
 
     }
