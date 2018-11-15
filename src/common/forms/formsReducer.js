@@ -72,7 +72,7 @@ export const formsReducer = handleActions(
         } : null
       }
 
-      const isFormValid = isNil(formSoFar.isFormValid) ? isFieldValid : formSoFar.isFormValid && formSoFar.isFormValid
+      const isFormValid = isNil(formSoFar.isFormValid) ? isFieldValid : formSoFar.isFormValid && isFieldValid
 
       return {
         ...state,
