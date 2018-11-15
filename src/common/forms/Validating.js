@@ -24,7 +24,6 @@ export const Validating = Component => {
         className,
         isValid,
         notification,
-        label,
       } = this.props
 
       const message = !isNil(notification) && (
@@ -38,11 +37,6 @@ export const Validating = Component => {
 
       return (
         <Fragment>
-          {label && (
-            <label htmlFor={id}>
-              {label}
-            </label>
-          )}
           <Component id={id}
                      onChange={this.onChange}
                      className={componentClassName}

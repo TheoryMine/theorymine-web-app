@@ -17,6 +17,7 @@ import PrivacyPolicy from "./pages/content-only/PrivacyPolicy"
 import BuyTheorem from "./pages/Checkout/BuyTheorem"
 import Checkout from "./pages/Checkout/CheckoutContainer"
 import CertificateExample from "./pages/content-only/CertificateExample"
+import Register from "./pages/Session/Register"
 
 class App extends Component {
   static displayName = 'App';
@@ -44,6 +45,7 @@ class App extends Component {
               <Route  name='Privacy Policy' path='/privacy' component={PrivacyPolicy}/>
               <Route  name='Discover' path='/discover' component={BuyTheorem}/>
               <Route  name='Checkout' path='/checkout' component={Checkout}/>
+              <Route  name='Register' path='/register' component={Register}/>
               <Redirect to='/'/>
             </Switch>
             <FooterBanner/>

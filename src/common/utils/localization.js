@@ -376,13 +376,13 @@ const localisation = {
 
     //register
 
-    register_title: <span>Register with TheoryMine</span>,
+    register_title: 'Register with TheoryMine',
     register_missing_entry: <span>Please fill the fields marked with * and re-enter your password.</span>,
     register_mismatch: <span>Your passwords did not match, please re-enter it in the fields marked *.</span>,
     register_privacy: <span>Information on how we use the personal data that you submit on our site is contained in
       our
       privacy and cookie policy</span>,
-    register_retype1: <span>Retyped password:</span>,
+    register_retype1: 'Retyped password:',
     register_retype2: <span>please retype your password here</span>,
     register_nearly:
       <span>Thank you, registration is nearly complete. An email has been sent to: </span>,
@@ -470,43 +470,43 @@ const localisation = {
 
     //general
 
-    login: <span>log-in</span>
+    login: 'log-in'
     ,
     faq:
-      <span>f.a.q</span>
+      'f.a.q'
     ,
     letusknow:
-      <span>let us know</span>
+      'let us know'
     ,
     register:
-      <span>Register</span>
+      'Register'
     ,
     theorems:
-      <span>theorems</span>
+      'theorems'
     ,
     email:
-      <span>Email Address</span>
+      'Email Address'
     ,
     firstname:
-      <span>First Name</span>
+      'First Name'
     ,
     lastname:
-      <span>Last Name</span>
+      'Last Name'
     ,
     cancel:
-      <span>Cancel</span>
+      'Cancel'
     ,
     password:
-      <span>Password: </span>
+      'Password'
     ,
     select:
-      <span>Select</span>
+      'Select'
     ,
     edit_details:
-      <span>Edit Details</span>
+      'Edit Details'
     ,
     change_password:
-      <span>Change Password</span>
+      'Change Password'
     ,
     update: "Update my details",
     submit: 'Submit',

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 export default class ValidatingForm extends Component {
   static propsTypes = {
-    formid: PropTypes.string.isRequired,
+    formId: PropTypes.string.isRequired,
     buttonText: PropTypes.string,
     onSubmitAction: PropTypes.object.isRequired,
   }
@@ -19,14 +19,11 @@ export default class ValidatingForm extends Component {
 
   render () {
 
-    const { formid, children, buttonText= 'Submit' } = this.props
-    const childrenWithFormId = React.Children.map(children, child =>
-      React.cloneElement(child, { formid })
-    );
+    const { formId, children, className = '', buttonClassName = 'submit-button', buttonText= 'Submit' } = this.props
     return (
-      <form id={formid} onSubmit={this.handleSubmit}>
-        {childrenWithFormId}
-        <button className='intro-button' type='submit'>{buttonText}</button>
+      <form id={formId} onSubmit={this.handleSubmit} className={className}>
+        {children}
+        <button className={buttonClassName} type='submit'>{buttonText}</button>
       </form>
 
 

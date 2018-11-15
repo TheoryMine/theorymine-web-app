@@ -28,12 +28,12 @@ class CheckoutPayment extends Component {
   }
 
   render () {
-    const formid = 'payTheorem'
+    const formId = 'payTheorem'
 
     return (
-      <form id={formid} className='tm-form' onSubmit={this.handleSubmit}>
+      <form id={formId} className='tm-form' onSubmit={this.handleSubmit}>
 
-        <div className="tm-form-row">
+        <div className="tm-form-row m-3">
 
           <label htmlFor="card-element">
             Credit or debit card

@@ -4,13 +4,13 @@ import { getFormFieldsNames, getFormValidity } from "./formsSelectors"
 
 export function* validateFormAndSubmit (action) {
   const onSubmit = action.payload.nextAction
-  const formid = action.payload.formid
+  const formId = action.payload.formId
   const onSubmitAction = onSubmit.action
   const onSubmitArgs= onSubmit.payload || null
 
-  const formFields = yield select(getFormFieldsNames(formid))
-  yield all(formFields.map(field => put(validateFieldValue({formName: formid, fieldName: field}))));
-  const isFormValid = yield select(getFormValidity(formid))
+  const formFields = yield select(getFormFieldsNames(formId))
+  yield all(formFields.map(field => put(validateFieldValue({formName: formId, fieldName: field}))));
+  const isFormValid = yield select(getFormValidity(formId))
   if (isFormValid){
     yield put(onSubmitAction(onSubmitArgs))
   }
