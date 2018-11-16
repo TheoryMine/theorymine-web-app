@@ -25,7 +25,6 @@ export default class BuyTheorem extends Component {
           <div className='border p-3'>
             <ValidatingForm
               formId={formId}
-              buttonText={local.next}
               onSubmitAction={{ action: redirect, payload: { to: pagesUrls.checkout } }}>
               <h2 className="section-heading-upper">{local[ 'overview_get_started' ]}</h2>
               <QuestionMark/>
@@ -35,6 +34,7 @@ export default class BuyTheorem extends Component {
                 validators={[ formFieldValidators.isNotEmpty ]}
                 type='text'/>
               <p>{local[ 'overview_eg' ]}</p>
+              <button type='submit'>{local.next}</button>
             </ValidatingForm>
           </div>
 

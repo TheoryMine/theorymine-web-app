@@ -48,7 +48,6 @@ export default class ValidatingForm extends Component {
       <form id={formId} onSubmit={this.handleSubmit} className={className + ' ' + validityClassName}>
         {notificationBanner}
         {children}
-        <button className={buttonClassName} type='submit'>{buttonText}</button>
       </form>
 
 

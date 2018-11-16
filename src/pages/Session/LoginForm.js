@@ -16,7 +16,6 @@ export default class LoginForm extends Component {
       <ValidatingForm
         className='tm-form m-4'
         formId={formId}
-        buttonText={local.links_login}
         onSubmitAction={{ action: loginRequested, }}
         onSuccessAction={{ action: loginSucceeded, }}
         onFailureAction={{ action: loginFailed, }}>
@@ -36,6 +35,7 @@ export default class LoginForm extends Component {
             validators={[ formFieldValidators.isNotEmpty ]}
             type='password'/>
         </div>
+        <button type='submit'>{local.links_login}</button>
       </ValidatingForm>
     );
   }

@@ -7,10 +7,6 @@ import { checkoutRequested } from "./checkoutActions"
 
 class CheckoutPayment extends Component {
 
-  static propsTypes = {
-    theoremName: PropTypes.string.isRequired,
-  }
-
   constructor (props) {
     super(props)
     this.state = { stripeErrors: "" }
@@ -32,7 +28,6 @@ class CheckoutPayment extends Component {
       <ValidatingForm
         className='tm-form m-4'
         formId={formId}
-        buttonText={local.submit_payment}
         onSubmitAction={{ action: checkoutRequested, payload: { stripeClient: this.props.stripe  }}}>
 
         <div className="tm-form-row m-3">
@@ -44,6 +39,7 @@ class CheckoutPayment extends Component {
           <div id="card-errors" className='field-notification field-notification-error'
                role="alert">{this.state.stripeErrors}</div>
         </div>
+        <button type='submit' disabled={this.props.isDisabled}>{local.submit_payment}</button>
       </ValidatingForm>
 
 

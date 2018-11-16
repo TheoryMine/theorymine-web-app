@@ -524,6 +524,7 @@ const localisation = {
       <Link to={pagesUrls.privacyPolicy}> Privacy Policy</Link>
     </span>,
     submit_payment: 'Submit Payment',
+    please_login: <span>Please <Link to={pagesUrls.login}>log in </Link> or <Link to={pagesUrls.register}>register</Link> before proceeding with your order.</span>,
 
     ///*******ERRORS*************/
     //

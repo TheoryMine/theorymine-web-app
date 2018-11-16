@@ -18,7 +18,6 @@ export class RegistrationForm extends Component {
       <ValidatingForm
         className='tm-form m-4'
         formId={formId}
-        buttonText={local.register}
         onSubmitAction={{ action: registrationRequested, }}
         onSuccessAction={{ action: registrationSucceeded, }}
         onFailureAction={{ action: registrationFailed, }}>
@@ -75,6 +74,7 @@ export class RegistrationForm extends Component {
             text={local.accept_conditions}
             validators={[ sessionValidators.tAndCAccepted ]}/>
         </div>
+        <button type='submit'>{local.register}</button>
       </ValidatingForm>
     );
   }
