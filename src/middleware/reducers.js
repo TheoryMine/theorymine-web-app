@@ -1,19 +1,21 @@
 import { combineReducers } from 'redux';
-import { routerReducer } from 'react-router-redux';
-import storage from 'redux-persist/lib/storage';
-import { errorsReducer } from "../common/requests/errorsReducer"
+import { routerReducer } from 'react-router-redux'
+import { persistReducer } from 'redux-persist'
+import storage from 'redux-persist/lib/storage'
 import { formsReducer } from "../common/forms/formsReducer"
+import { sessionReducer } from "../pages/Session/sessionReducer"
 
 const config = {
   key: 'primary',
-  storage
-};
+  storage,
+  whitelist: ['session'],
+}
 
 const reducers = combineReducers({
     routing: routerReducer,
-    error: errorsReducer,
-    forms: formsReducer
+    forms: formsReducer,
+    session: sessionReducer
   }
 );
 
-export default reducers;
+export default persistReducer(config, reducers)

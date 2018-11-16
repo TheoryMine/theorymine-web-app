@@ -7,3 +7,5 @@ export const registrationFailed = createAction('REGISTRATION_FAILED')
 export const loginRequested= createAction('LOGIN_REQUESTED')
 export const loginSucceeded = createAction('LOGIN_SUCCEEDED')
 export const loginFailed = createAction('LOGIN_FAILED')
+
+export const logoutSucceeded = createAction('LOGOUT_SUCCEEDED')
