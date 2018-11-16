@@ -4,8 +4,9 @@ import { local } from "../../common/utils/localization"
 import { Link } from "react-router-dom"
 import { pagesUrls } from "../../common/navigation/navigationConstants"
 import LoginForm from "./LoginForm"
+import Restricting from "../../common/navigation/RestrictingContainer"
 
-export default class Login extends Component {
+let Login = class extends Component {
   render () {
 
     return (
@@ -23,3 +24,10 @@ export default class Login extends Component {
   }
 }
 
+const restrictions = [
+  props => props.isNotLoggedIn
+]
+
+Login = Restricting({ to: restrictions, Component: Login })
+
+export default Login
