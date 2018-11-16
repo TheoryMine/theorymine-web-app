@@ -13,7 +13,8 @@ export default class FooterBanner extends PureComponent {
         <div>
           <Link to={pagesUrls.termsAndConditions}>{local['footer_tc']}</Link> |
           <Link to={pagesUrls.privacyPolicy}>{local['footer_privacy']}</Link> |
-          <Link to={pagesUrls.cancellations}>{local['footer_cancellations']}</Link>
+          <Link to={pagesUrls.cancellations}>{local['footer_cancellations']}</Link>|
+          <Link to={pagesUrls.faq}>{local.links_faq}</Link>
         </div>
         <p>
           Copyright 2011 TheoryMine Limited

@@ -5,7 +5,7 @@ import { Router, Route, Switch, Redirect } from 'react-router-dom';
 
 import history from "./common/history"
 import Home from "./pages/home/Home"
-import HeaderBanner from "./common/banners/HeaderBanner"
+import HeaderBanner from "./common/banners/HeaderBannerContainer"
 import Faq from "./pages/content-only/Faq"
 import About from "./pages/content-only/AboutUs"
 import GiftPacks from "./pages/content-only/GiftPacks"

@@ -1,30 +1,36 @@
-import React, { PureComponent } from 'react'
-import logo from "../../images/logo.png"
-import smallLogo from "../../images/small_logo.png"
+import React, { Component } from 'react'
+import PropTypes from 'prop-types';
+import { Link } from "react-router-dom"
 
+import '../../index.scss'
+import logo from "../../images/logo.png"
 import chinese_flag from "../../images/chinese_flag.gif"
 import english_flag from "../../images/english_flag.gif"
 import spanish_flag from "../../images/spanish_flag.gif"
-
-import '../../index.scss'
 import { pagesUrls } from "../navigation/navigationConstants"
 import { local } from "../utils/localization"
-import { Link } from "react-router-dom"
 
-export default class HeaderBanner extends PureComponent {
+export default class HeaderBanner extends Component {
 
   render () {
 
     const navigationTabs = [
       { title: local.links_home, redirectTo: pagesUrls.home },
-      { title: local.links_faq, redirectTo: pagesUrls.faq },
       { title: local.links_about, redirectTo: pagesUrls.aboutUs },
       { title: local.links_gift, redirectTo: pagesUrls.gifts },
       { title: local.links_test, redirectTo: pagesUrls.testimonials },
-      { title: local.links_login, redirectTo: pagesUrls.login },
     ]
 
-    const clickableNavigationTabs = navigationTabs.map(tab => (
+    const sessionHeaders = this.props.isLoggedIn
+      ? [{ title: local.links_profile, redirectTo: pagesUrls.home },]
+      : [{ title: local.links_login, redirectTo: pagesUrls.login },]
+
+    const logout =
+    <li className='nav-item px-lg-4' key='logout' onClick={this.props.logout}>
+      <p className="nav-link text-uppercase text-expanded">{local.links_logout}</p>
+    </li>
+
+    const clickableNavigationTabs = [...navigationTabs, ...sessionHeaders].map(tab => (
       <li className='nav-item px-lg-4' key={tab.title}>
         <Link className="nav-link text-uppercase text-expanded" to={tab.redirectTo}>{tab.title}</Link>
       </li>
@@ -60,6 +66,7 @@ export default class HeaderBanner extends PureComponent {
             <div className="collapse navbar-collapse" id="navbarResponsive">
               <ul className="navbar-nav mx-auto">
                 {clickableNavigationTabs}
+                {this.props.isLoggedIn && logout}
               </ul>
             </div>
           </div>
@@ -70,3 +77,11 @@ export default class HeaderBanner extends PureComponent {
   }
 }
 
+
+HeaderBanner.propTypes = {
+  isLoggedIn: PropTypes.bool.isRequired
+};
+
+HeaderBanner.defaultProps = {
+  isLoggedIn: false
+}
