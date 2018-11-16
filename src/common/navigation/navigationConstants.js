@@ -10,4 +10,6 @@ export const pagesUrls  = {
   termsAndConditions: '/tc',
   privacyPolicy: '/privacy',
   cancellations: '/cancellations',
+  login: '/login',
+  register: '/register',
 }

@@ -16,6 +16,9 @@ export default class Register extends Component {
 
     return (
       <div className='description-box'>
+        <h2 className="mb-4 mt-4">
+          <span className="section-heading-lower">{local[ 'register_title' ]}</span>
+        </h2>
         <ValidatingForm
           className='tm-form m-4'
           formId={formId}
@@ -23,9 +26,6 @@ export default class Register extends Component {
           onSubmitAction={{ action: registrationRequested, }}
           onSuccessAction={{ action: registrationSucceeded, }}
           onFailureAction={{ action: registrationFailed, }}>
-          <h2 className="mb-4 mt-4">
-            <span className="section-heading-lower">{local[ 'register_title' ]}</span>
-          </h2>
           <div className='tm-form-row'>
             <label className='form-text' htmlFor={fieldNames.firstName}>{local.firstname}</label>
             <ValidatingInput

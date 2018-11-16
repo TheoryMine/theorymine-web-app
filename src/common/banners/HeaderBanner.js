@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react'
 import logo from "../../images/logo.png"
+import smallLogo from "../../images/small_logo.png"
 
 import chinese_flag from "../../images/chinese_flag.gif"
 import english_flag from "../../images/english_flag.gif"
@@ -20,6 +21,7 @@ export default class HeaderBanner extends PureComponent {
       { title: local.links_about, redirectTo: pagesUrls.aboutUs },
       { title: local.links_gift, redirectTo: pagesUrls.gifts },
       { title: local.links_test, redirectTo: pagesUrls.testimonials },
+      { title: local.links_login, redirectTo: pagesUrls.login },
     ]
 
     const clickableNavigationTabs = navigationTabs.map(tab => (

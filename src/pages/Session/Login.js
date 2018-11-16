@@ -6,6 +6,8 @@ import { formFieldValidators } from "../../common/forms/formFieldValidators"
 import { fieldNames, formsNames } from "../../common/forms/formsAndFieldsConstants"
 import ValidatingForm from "../../common/forms/ValidatingFormContainer"
 import { loginFailed, loginRequested, loginSucceeded, } from "./sessionActions"
+import { Link } from "react-router-dom"
+import { pagesUrls } from "../../common/navigation/navigationConstants"
 
 export default class Login extends Component {
   render () {
@@ -14,6 +16,11 @@ export default class Login extends Component {
 
     return (
       <div className='description-box'>
+        <h2 className="mb-4 mt-4">
+          <span className="section-heading-lower">{local[ 'login_title' ]}</span>
+        </h2>
+        <p className='tm-form-row m-4'>{local.login_noaccount}<Link to={pagesUrls.register}> {local.register}</Link>
+        </p>
         <ValidatingForm
           className='tm-form m-4'
           formId={formId}
@@ -21,9 +28,6 @@ export default class Login extends Component {
           onSubmitAction={{ action: loginRequested, }}
           onSuccessAction={{ action: loginSucceeded, }}
           onFailureAction={{ action: loginFailed, }}>
-          <h2 className="mb-4 mt-4">
-            <span className="section-heading-lower">{local[ 'login_title' ]}</span>
-          </h2>
           <div className='tm-form-row'>
             <label className='form-text' htmlFor={fieldNames.email}>{local.email}</label>
             <ValidatingInput
