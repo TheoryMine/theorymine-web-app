@@ -2,6 +2,7 @@ export const formsNames = {
   discover: 'discoverTheorem',
   checkout: 'payTheorem',
   register: 'register',
+  login: 'login',
 }
 
 export const fieldNames = {

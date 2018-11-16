@@ -23,3 +23,17 @@ export const getRegistrationFormFields =
   createSelector([ getRegistrationEmail, getRegistrationFirstName, getRegistrationLastName, getRegistrationPassword ],
     (email, firstName, lastName, password) => ({ email, first_name: firstName, last_name: lastName, password }))
 
+
+export const getLoginEmail = getFormFieldValue({
+  formName: formsNames.login,
+  fieldName: fieldNames.email
+})
+export const getLoginPassword = getFormFieldValue({
+  formName: formsNames.login,
+  fieldName: fieldNames.password
+})
+
+export const getLoginFormFields =
+  createSelector([ getLoginEmail, getLoginPassword, ],
+    (email,password) => ({ email, password }))
+

@@ -376,7 +376,7 @@ const localisation = {
     login_resetpassword: <span>reset your password</span>,
     login_waiting_email: <span>You need to read your email, you have been emailed a link that you need in order to
       login.</span>,
-    login_noaccount: <span>/p>Don't have an account?</span>,
+    login_noaccount: <span>Don't have an account?</span>,
     login_pass_forgot: <span>forgot your password? </span>,
 
     //register
@@ -410,7 +410,7 @@ const localisation = {
     profile_good: <span>Details updated</span>,
     profile_return: <span>Return to overview</span>,
     profile_details: <span>Your Details:</span>,
-    profile_changepass: <span>/p>(You can also change your password)</span>,
+    profile_changepass: <span>(You can also change your password)</span>,
 
     //contact
 

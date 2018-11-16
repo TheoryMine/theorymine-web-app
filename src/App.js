@@ -18,6 +18,7 @@ import BuyTheorem from "./pages/Checkout/BuyTheorem"
 import Checkout from "./pages/Checkout/CheckoutContainer"
 import CertificateExample from "./pages/content-only/CertificateExample"
 import Register from "./pages/Session/Register"
+import Login from "./pages/Session/Login"
 
 class App extends Component {
   static displayName = 'App';
@@ -46,6 +47,7 @@ class App extends Component {
               <Route  name='Discover' path='/discover' component={BuyTheorem}/>
               <Route  name='Checkout' path='/checkout' component={Checkout}/>
               <Route  name='Register' path='/register' component={Register}/>
+              <Route  name='Login' path='/login' component={Login}/>
               <Redirect to='/'/>
             </Switch>
             <FooterBanner/>
