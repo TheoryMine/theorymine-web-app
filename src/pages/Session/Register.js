@@ -8,8 +8,9 @@ import ValidatingForm from "../../common/forms/ValidatingFormContainer"
 import { registrationFailed, registrationRequested, registrationSucceeded } from "./sessionActions"
 import { sessionValidators } from "./sessionValidators"
 import ValidatingCheckBox from "../../common/forms/ValidatingCheckBox"
+import Restricting from "../../common/navigation/RestrictingContainer"
 
-export default class Register extends Component {
+let Register = class extends Component {
   render () {
 
     const formId = formsNames.register
@@ -87,3 +88,11 @@ export default class Register extends Component {
   }
 }
 
+
+const restrictions = [
+  props => props.isNotLoggedIn
+]
+
+Register = Restricting({ to: restrictions, Component: Register })
+
+export default Register
