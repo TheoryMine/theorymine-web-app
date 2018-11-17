@@ -7,6 +7,7 @@ export const getForms = state => state.forms
 export const getForm = formName => createSelector([ getForms ], f => f[ formName ] || null)
 
 export const getFormValidity = formName => createSelector([ getForm(formName) ], f => f && f.isFormValid)
+export const getFormStatus = formName => createSelector([ getForm(formName) ], f => f && f.status)
 export const getFormNotification = formName => createSelector([ getForm(formName) ], f => f && f.formNotification)
 
 export const getFormFields = formName => createSelector([ getForm(formName) ], f => (f && f.fields) || {})

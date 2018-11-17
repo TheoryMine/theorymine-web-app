@@ -1,10 +1,11 @@
 import { handleActions } from 'redux-actions'
 import { isNil } from 'lodash'
 import {
-  fieldChanged, fieldInitialised, formInvalid, formSubmitted, formValid,
+  fieldChanged, fieldInitialised, formFailed, formSubmitted, formSucceeded,
   validateFieldValue
 } from "./formsActions"
 import { notificationLevels } from './formFieldValidators'
+import { formStatuses } from "./formsAndFieldsConstants"
 
 const initialState = { }
 const updateOneField = (form, fieldToUpdate, toUpdateValues) => {
@@ -95,7 +96,7 @@ export const formsReducer = handleActions(
       }
 
     },
-    [formInvalid]: (state, action) =>  {
+    [formFailed]: (state, action) =>  {
       const formName = action.payload.formId
       const notification = action.payload.notification || {}
       const formSoFar = state[ formName ] || {}
@@ -103,18 +104,20 @@ export const formsReducer = handleActions(
         ...state,
         [formName]: {
           ...formSoFar,
+          status: formStatuses.failed,
           isFormValid: false,
           formNotification: {message: notification.message, level: notification.level},
         }
       }
     },
-    [formValid]: (state, action) =>  {
+    [formSucceeded]: (state, action) =>  {
       const formName = action.payload.formId
       const formSoFar = state[ formName ] || {}
       return {
         ...state,
         [formName]: {
           ...formSoFar,
+          status: formStatuses.success,
           isFormValid: true,
           formNotification: null,
         }
@@ -127,6 +130,7 @@ export const formsReducer = handleActions(
         ...state,
         [formName]: {
           ...formSoFar,
+          status: formStatuses.inProgress,
           isFormValid: null,
           formNotification: null,
         }

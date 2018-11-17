@@ -5,6 +5,14 @@ export const formsNames = {
   login: 'login',
 }
 
+
+export const formStatuses = {
+  inProgress: 'in-progress',
+  success: 'success',
+  failed: 'failed',
+  initialised: 'initialised',
+}
+
 export const fieldNames = {
   theoremName: 'theoremName',
   firstName: 'firstName',
@@ -14,3 +22,5 @@ export const fieldNames = {
   password2: 'repeatedPassword',
   acceptTerms: 'acceptedTerms',
 }
+
+

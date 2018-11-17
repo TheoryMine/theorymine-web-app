@@ -6,6 +6,7 @@ import { formFieldValidators } from "../../common/forms/formFieldValidators"
 import { fieldNames, formsNames } from "../../common/forms/formsAndFieldsConstants"
 import ValidatingForm from "../../common/forms/ValidatingFormContainer"
 import { loginFailed, loginRequested, loginSucceeded, } from "./sessionActions"
+import ValidatingButton from "../../common/forms/ValidatingButton"
 
 export default class LoginForm extends Component {
   render () {
@@ -35,7 +36,7 @@ export default class LoginForm extends Component {
             validators={[ formFieldValidators.isNotEmpty ]}
             type='password'/>
         </div>
-        <button type='submit'>{local.links_login}</button>
+        <ValidatingButton formId={formId} type='submit' text={local.links_login}/>
       </ValidatingForm>
     );
   }

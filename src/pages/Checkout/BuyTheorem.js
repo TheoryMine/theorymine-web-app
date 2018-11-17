@@ -9,6 +9,7 @@ import { Link } from "react-router-dom"
 import { pagesUrls } from "../../common/navigation/navigationConstants"
 import ValidatingForm from "../../common/forms/ValidatingFormContainer"
 import { redirect } from "../../common/navigation/navigationActions"
+import ValidatingButton from "../../common/forms/ValidatingButtonContainer"
 
 export default class BuyTheorem extends Component {
   render () {

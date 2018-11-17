@@ -1,6 +1,6 @@
 import { put, select, takeLatest, all, race, take } from 'redux-saga/effects'
 import { isNil } from 'lodash'
-import { formInvalid, formSubmitted, formValid, validateFieldValue } from "./formsActions"
+import { formFailed, formSubmitted, formSucceeded, validateFieldValue } from "./formsActions"
 import { getFormFieldsNames, getFormValidity } from "./formsSelectors"
 
 export function* validateFormAndSubmit (action) {
@@ -21,12 +21,12 @@ export function* validateFormAndSubmit (action) {
       })
 
       if (!isNil(submitExit.success)){
-        yield put(formValid({formId}))
+        yield put(formSucceeded({formId}))
       }
 
       else if (!isNil(submitExit.failure)){
         const formNotification = submitExit.failure.payload.notification || null
-        yield put(formInvalid({formId, notification: formNotification}))
+        yield put(formFailed({formId, notification: formNotification}))
       }
 
     }

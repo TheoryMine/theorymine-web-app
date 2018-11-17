@@ -8,6 +8,7 @@ import ValidatingForm from "../../common/forms/ValidatingFormContainer"
 import { registrationFailed, registrationRequested, registrationSucceeded } from "./sessionActions"
 import { sessionValidators } from "./sessionValidators"
 import ValidatingCheckBox from "../../common/forms/ValidatingCheckBox"
+import ValidatingButton from "../../common/forms/ValidatingButton"
 
 export class RegistrationForm extends Component {
   render () {
@@ -74,7 +75,7 @@ export class RegistrationForm extends Component {
             text={local.accept_conditions}
             validators={[ sessionValidators.tAndCAccepted ]}/>
         </div>
-        <button type='submit'>{local.register}</button>
+        <ValidatingButton formId={formId} type='submit' text={local.register}/>
       </ValidatingForm>
     );
   }

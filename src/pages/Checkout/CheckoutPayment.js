@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import { local } from "../../common/utils/localization"
 import { CardElement, injectStripe } from 'react-stripe-elements'
 import ValidatingForm from "../../common/forms/ValidatingFormContainer"
 import { checkoutFailed, checkoutRequested, checkoutSucceeded } from "./checkoutActions"
+import ValidatingButton from "../../common/forms/ValidatingButtonContainer"
 
 class CheckoutPayment extends Component {
 
@@ -41,7 +41,8 @@ class CheckoutPayment extends Component {
           <div id="card-errors" className='field-notification field-notification-error'
                role="alert">{this.state.stripeErrors}</div>
         </div>
-        <button type='submit' disabled={this.props.isDisabled}>{local.submit_payment}</button>
+
+        <ValidatingButton formId={formId} disabled={this.props.isDisabled} type='submit' text={local.submit_payment}/>
       </ValidatingForm>
 
 
