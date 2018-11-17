@@ -40,3 +40,4 @@ export const getLoginFormFields =
 
 export const getSession = state => state.session
 export const isLoggedIn = createSelector([ getSession ], s => !isNil(s.user_id))
+export const getAuthToken = createSelector([ getSession ], s => s.auth_token)

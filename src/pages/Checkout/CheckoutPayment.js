@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { local } from "../../common/utils/localization"
 import { CardElement, injectStripe } from 'react-stripe-elements'
 import ValidatingForm from "../../common/forms/ValidatingFormContainer"
-import { checkoutRequested } from "./checkoutActions"
+import { checkoutFailed, checkoutRequested, checkoutSucceeded } from "./checkoutActions"
 
 class CheckoutPayment extends Component {
 
@@ -28,7 +28,9 @@ class CheckoutPayment extends Component {
       <ValidatingForm
         className='tm-form m-4'
         formId={formId}
-        onSubmitAction={{ action: checkoutRequested, payload: { stripeClient: this.props.stripe  }}}>
+        onSubmitAction={{ action: checkoutRequested, payload: { stripeClient: this.props.stripe  }}}
+        onSuccessAction={{ action: checkoutSucceeded, }}
+        onFailureAction={{ action: checkoutFailed, }}>
 
         <div className="tm-form-row m-3">
 
