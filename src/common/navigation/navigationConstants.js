@@ -12,4 +12,5 @@ export const pagesUrls  = {
   cancellations: '/cancellations',
   login: '/login',
   register: '/register',
+  success: '/success',
 }

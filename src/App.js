@@ -19,6 +19,7 @@ import Checkout from "./pages/Checkout/CheckoutContainer"
 import CertificateExample from "./pages/content-only/CertificateExample"
 import Register from "./pages/Session/Register"
 import Login from "./pages/Session/Login"
+import Success from "./pages/Checkout/Success"
 
 class App extends Component {
   static displayName = 'App';
@@ -48,6 +49,7 @@ class App extends Component {
               <Route  name='Checkout' path='/checkout' component={Checkout}/>
               <Route  name='Register' path='/register' component={Register}/>
               <Route  name='Login' path='/login' component={Login}/>
+              <Route  name='Success' path='/success' component={Success}/>
               <Redirect to='/'/>
             </Switch>
             <FooterBanner/>
