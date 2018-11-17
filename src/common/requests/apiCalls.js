@@ -75,6 +75,7 @@ export const apiClient = (baseUrl, additionalHeaders = {}) => {
     register: (body, headers = {}) => makeApiPostCall('/auth/users', body, headers),
     login: (body, headers = {}) => makeApiPostCall('/auth/session', body, headers),
     orderTheorem: (body, headers = {}) => makeApiPostCall('/registry/orders', body, headers),
+    getOrders: (headers = {}) => makeApiGetCall('/registry/orders', headers),
   }
 }
 

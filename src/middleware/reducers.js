@@ -5,18 +5,20 @@ import storage from 'redux-persist/lib/storage'
 import { formsReducer } from "../common/forms/formsReducer"
 import { sessionReducer } from "../pages/Session/sessionReducer"
 import { rehidrationReducer } from "../common/utils/rehidrtionReducer"
+import { accountReducer } from "../pages/account/accountReducer"
 
 const config = {
   key: 'primary',
   storage,
-  whitelist: ['session'],
+  whitelist: [ 'session' ],
 }
 
 const reducers = combineReducers({
     routing: routerReducer,
     forms: formsReducer,
     session: sessionReducer,
-    rehidration: rehidrationReducer
+    rehidration: rehidrationReducer,
+    account: accountReducer,
   }
 );
 

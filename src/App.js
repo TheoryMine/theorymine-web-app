@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import { Router, Route, Switch, Redirect } from 'react-router-dom';
 
 import history from "./common/history"
-import Home from "./pages/home/Home"
+import Home from "./pages/account/Home"
 import HeaderBanner from "./common/banners/HeaderBannerContainer"
 import Faq from "./pages/content-only/Faq"
 import About from "./pages/content-only/AboutUs"
@@ -20,7 +20,7 @@ import CertificateExample from "./pages/content-only/CertificateExample"
 import Register from "./pages/Session/Register"
 import Login from "./pages/Session/Login"
 import Success from "./pages/Checkout/Success"
-import MyTheorems from "./pages/home/MyTheorems"
+import MyTheorems from "./pages/account/MyTheoremsContainer"
 
 class App extends Component {
   static displayName = 'App';

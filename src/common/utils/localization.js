@@ -424,9 +424,9 @@ const localisation = {
 
     dicoveredthm_one: <span>You have named one theorem</span>,
     dicoveredthm_younamed: <span>You have named </span>,
-    dicoveredthm_viewcert: <span>View Certificate</span>,
-    dicoveredthm_viewbro: <span>View Brochure</span>,
-    dicoveredthm_shop: <span>Gift Items Shop</span>,
+    dicoveredthm_viewcert: 'View Certificate',
+    dicoveredthm_viewbro: 'View Brochure',
+    dicoveredthm_shop: 'Gift Items Shop',
 
     //dicoveries-in-progress
 
@@ -527,6 +527,9 @@ const localisation = {
     please_login: <span>Please <Link to={pagesUrls.login}>log in </Link> or <Link to={pagesUrls.register}>register</Link> before proceeding with your order.</span>,
     order_successful: 'Thank you for your order!',
     order_successful_2: 'You will receive an email when your theorem is ready to download!',
+    my_theorems: 'My Theorems',
+    thm_in_progress: 'Waiting to be discovered',
+    thm_processed: 'Discovered',
     ///*******ERRORS*************/
     //
 
