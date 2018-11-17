@@ -11,7 +11,7 @@ import { notificationLevels } from "../../common/forms/formFieldValidators"
 export function* register() {
   const registrationFields= yield select(getRegistrationFormFields)
 
-  const response = yield call(api.register,registrationFields)
+  const response = yield call(api.register, {}, registrationFields)
   if (response.ok) {
     yield put(registrationSucceeded({body: response.body}))
   } else {
@@ -28,7 +28,7 @@ export function* watchForRegisterRequested() {
 export function* login() {
   const registrationFields= yield select(getLoginFormFields)
 
-  const response = yield call(api.login,registrationFields)
+  const response = yield call(api.login, {}, registrationFields)
   if (response.ok) {
     yield put(loginSucceeded({body: response.body}))
   } else {

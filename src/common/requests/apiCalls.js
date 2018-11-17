@@ -72,16 +72,16 @@ export const apiClient = (baseUrl, additionalHeaders = {}) => {
     )
 
   return {
-    register: (body, headers = {}) => makeApiPostCall('/auth/users', body, headers),
-    login: (body, headers = {}) => makeApiPostCall('/auth/session', body, headers),
-    orderTheorem: (body, headers = {}) => makeApiPostCall('/registry/orders', body, headers),
-    getOrders: (headers = {}) => makeApiGetCall('/registry/orders', headers),
+    register: (headers = {}, body) => makeApiPostCall('/auth/users', body, headers),
+    login: (headers = {}, body) => makeApiPostCall('/auth/session', body, headers),
+    orderTheorem: (headers = {}, body) => makeApiPostCall('/registry/orders', body, headers),
+    getOrders: (headers = {}, body) => makeApiGetCall('/registry/orders', headers),
   }
 }
 
 export const fakeApiClient = () => ({
   ...apiClient(baseUrl),
-  register: (body, headers = {}) => Promise.resolve({
+  register: (headers = {}, body) => Promise.resolve({
     ok: true,
     status: 201,
     body: {

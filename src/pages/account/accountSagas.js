@@ -1,13 +1,12 @@
 import { put, takeLatest, call, select } from 'redux-saga/effects'
 import { api } from "../../common/requests/apiCalls"
-import { getAuthToken } from "../Session/sessionSelectors"
 
 import { getUserTheoremsFailed, getUserTheoremsRequested, getUserTheoremsSucceeded } from "./accountActions"
+import { makeAuthorisedRequest } from "../../common/requests/requestsSagas"
 
 export function* getTheorems () {
   try {
-    const auth_token = yield select(getAuthToken)
-    const response = yield call(api.getOrders, { 'Authorization': 'Bearer ' + auth_token })
+    const response = yield call(makeAuthorisedRequest, { apiCall: api.getOrders })
     if (response.ok) {
       yield put(getUserTheoremsSucceeded({ body: response.body }))
     } else {
