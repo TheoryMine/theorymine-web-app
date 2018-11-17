@@ -4,14 +4,13 @@ import CheckoutPayment from "./CheckoutPayment"
 import Restricting from "../../common/navigation/RestrictingContainer"
 import { pagesUrls } from "../../common/navigation/navigationConstants"
 import { local } from "../../common/utils/localization"
-
 let Checkout = class extends Component {
 
   render () {
 
     const pleaseLogInAlert = !this.props.isLoggedIn && <p className='field-notification-error font-weight-bold'>{local.please_login}</p>
     return (
-      <StripeProvider apiKey="pk_test_TYooMQauvdEDq54NiTphI7jx">
+      <StripeProvider apiKey="pk_test_Gy6QpuLX25ddTc1duzNE3Pdr">
         <div>
           <div className="description-box">
             <h2 className="mb-4 mt-4">

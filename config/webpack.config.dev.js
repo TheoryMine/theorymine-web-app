@@ -68,8 +68,7 @@ module.exports = {
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: JSON.stringify('development'),
-        REACT_APP_USERNAME: JSON.stringify(process.env.REACT_APP_USERNAME),
-        REACT_APP_PASSWORD: JSON.stringify(process.env.REACT_APP_PASSWORD),
+        REACT_APP_STRIPE_PK: JSON.stringify(process.env.REACT_APP_STRIPE_PK),
       },
     }),
   ],
