@@ -4,12 +4,14 @@ import { Restricting } from "./Restricting"
 import { isLoggedIn } from "../../pages/Session/sessionSelectors"
 import { redirect } from "./navigationActions"
 import { hasNamedTheorem } from "../../pages/Checkout/checkoutSelectors"
+import { hasAppLoaded } from "../utils/rehidrationSelectors"
 
 export const mapStateToProps = state => {
   return {
     isLoggedIn: isLoggedIn(state),
     isNotLoggedIn: !isLoggedIn(state),
-    hasNamedTheorem: hasNamedTheorem(state)
+    hasNamedTheorem: hasNamedTheorem(state),
+    loaded: hasAppLoaded(state)
   }
 }
 

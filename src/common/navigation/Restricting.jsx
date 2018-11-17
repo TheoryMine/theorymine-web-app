@@ -18,7 +18,9 @@ export const Restricting = ({ Component, to , redirect = pagesUrls.home }) => {
       }
 
       componentDidMount () {
-        this.restrictAccess()
+        if (this.props.loaded) {
+          this.restrictAccess()
+        }
       }
 
       componentDidUpdate () {

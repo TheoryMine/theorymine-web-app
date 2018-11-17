@@ -20,6 +20,7 @@ import CertificateExample from "./pages/content-only/CertificateExample"
 import Register from "./pages/Session/Register"
 import Login from "./pages/Session/Login"
 import Success from "./pages/Checkout/Success"
+import MyTheorems from "./pages/home/MyTheorems"
 
 class App extends Component {
   static displayName = 'App';
@@ -50,6 +51,7 @@ class App extends Component {
               <Route  name='Register' path='/register' component={Register}/>
               <Route  name='Login' path='/login' component={Login}/>
               <Route  name='Success' path='/success' component={Success}/>
+              <Route  name='My Theorems' path='/my-theorems' component={MyTheorems}/>
               <Redirect to='/'/>
             </Switch>
             <FooterBanner/>

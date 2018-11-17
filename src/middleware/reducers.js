@@ -4,6 +4,7 @@ import { persistReducer } from 'redux-persist'
 import storage from 'redux-persist/lib/storage'
 import { formsReducer } from "../common/forms/formsReducer"
 import { sessionReducer } from "../pages/Session/sessionReducer"
+import { rehidrationReducer } from "../common/utils/rehidrtionReducer"
 
 const config = {
   key: 'primary',
@@ -14,7 +15,8 @@ const config = {
 const reducers = combineReducers({
     routing: routerReducer,
     forms: formsReducer,
-    session: sessionReducer
+    session: sessionReducer,
+    rehidration: rehidrationReducer
   }
 );
 
