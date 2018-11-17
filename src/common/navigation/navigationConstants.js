@@ -13,4 +13,5 @@ export const pagesUrls  = {
   login: '/login',
   register: '/register',
   success: '/success',
+  myTheorems: '/my-theorems'
 }

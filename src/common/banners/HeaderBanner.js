@@ -22,7 +22,7 @@ export default class HeaderBanner extends Component {
     ]
 
     const sessionHeaders = this.props.isLoggedIn
-      ? [{ title: local.links_profile, redirectTo: pagesUrls.home },]
+      ? [{ title: local.links_profile, redirectTo: pagesUrls.myTheorems },]
       : [{ title: local.links_login, redirectTo: pagesUrls.login },]
 
     const logout =
