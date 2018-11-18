@@ -10,6 +10,7 @@ import { pagesUrls } from "../../common/navigation/navigationConstants"
 import ValidatingForm from "../../common/forms/ValidatingFormContainer"
 import { redirect } from "../../common/navigation/navigationActions"
 import ValidatingButton from "../../common/forms/ValidatingButtonContainer"
+import { checkoutValidators } from "./checkoutValidators"
 
 export default class BuyTheorem extends Component {
   render () {
@@ -32,7 +33,7 @@ export default class BuyTheorem extends Component {
               <ValidatingInput
                 formId={formId}
                 id={fieldNames.theoremName}
-                validators={[ formFieldValidators.isNotEmpty ]}
+                validators={[ formFieldValidators.isNotEmpty, checkoutValidators.isInappropriate ]}
                 type='text'/>
               <p>{local[ 'overview_eg' ]}</p>
               <button type='submit'>{local.next}</button>

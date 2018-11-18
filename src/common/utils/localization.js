@@ -530,7 +530,8 @@ const localisation = {
     my_theorems: 'My Theorems',
     thm_in_progress: 'Waiting to be discovered',
     thm_processed: 'Discovered',
-    ///*******ERRORS*************/
+    name_inappropriate: 'The name you have choosen might be inappropriate. Please double check the name you have entered.',
+  ///*******ERRORS*************/
     //
 
     err_empty: 'Please enter a value for this field',
