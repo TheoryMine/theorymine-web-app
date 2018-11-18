@@ -12,6 +12,18 @@ import { local } from "../utils/localization"
 
 export default class HeaderBanner extends Component {
 
+  constructor (props) {
+    super(props)
+    this.state = { menuCollapsed: true }
+  }
+
+  handleMobileClick = () => {
+    this.setState((prevState, props) => ({
+      menuCollapsed: !prevState.menuCollapsed
+    }));
+  }
+
+
   render () {
 
     const navigationTabs = [
@@ -36,6 +48,8 @@ export default class HeaderBanner extends Component {
       </li>
     ))
 
+    const mobileNavClassName = this.state.menuCollapsed ? "collapse navbar-collapse" : "navbar-collapse"
+
     return (
       <div>
         <h1 className="site-heading pr-5 pl-5 d-none d-lg-block">
@@ -59,11 +73,11 @@ export default class HeaderBanner extends Component {
             <Link to={pagesUrls.home} className="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none">
               TheoryMine
             </Link>
-            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+            <button onClick={this.handleMobileClick} className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
                     aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
               <span className="navbar-toggler-icon"/>
             </button>
-            <div className="collapse navbar-collapse" id="navbarResponsive">
+            <div className={mobileNavClassName} id="navbarResponsive">
               <ul className="navbar-nav mx-auto">
                 {clickableNavigationTabs}
                 {this.props.isLoggedIn && logout}
