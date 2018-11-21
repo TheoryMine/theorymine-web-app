@@ -23,14 +23,14 @@ const GiftPacks = () => {
       <h3 className="section-heading-upper">{local[ 'gift_h2' ]}</h3>
       <ul>
         <li>{local[ 'gift_li2_1' ]}<br/>
-          <img src={theorymineTshirt2}/>
-          <img src={theorymineTshirt1}/>
+          <img className='content-only-image'  src={theorymineTshirt2}/>
+          <img className='content-only-image' src={theorymineTshirt1}/>
         </li>
         <li>{local[ 'gift_li2_2' ]}<br/>
-          <img src={theorymine_mug}/>
+          <img className='content-only-image' src={theorymine_mug}/>
         </li>
         <li>{local[ 'gift_li2_3' ]}<br/>
-          <img src={theorymine_mousepad}/>
+          <img className='content-only-image'  src={theorymine_mousepad}/>
       </li>
     </ul>
       <p>{local['gift_end']}</p>

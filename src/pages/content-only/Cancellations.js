@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
 import ContentPage from "./ContentPage"
 import { local } from "../../common/utils/localization"
-import theorymine_mousepad from '../../images/theorymine_mousepad.jpg';
-import theorymine_mug from '../../images/theorymine_mug.jpg';
-import theorymineTshirt2 from '../../images/theorymine_t_shirt2.jpg';
-import theorymineTshirt1 from '../../images/theorymine_tshirt1.jpg';
 
 const Cancellations = () => {
 

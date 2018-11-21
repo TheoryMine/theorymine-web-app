@@ -12,7 +12,7 @@ const Testimonials = () => {
         <p>{local[ 'tes_p1' ]}</p>
         <p className='font-italic small'>&nbsp;  &nbsp;  Anne Glover, Chief Scientific Officer for Scotland ,
           Glover-George Theorem </p>
-        <img src={anneGlover}/>
+        <img className='content-only-image'  src={anneGlover}/>
       </div>
 
       <div className='testimonial'>
@@ -43,7 +43,7 @@ const Testimonials = () => {
       <div className='testimonial'>
         <p>{local[ 'tes_p6' ]}</p>
         <p className='font-italic small'>&nbsp;  &nbsp;   Nigel Brown, Ned's Theorem</p>
-        <img src={ned}/>
+        <img className='content-only-image'  src={ned}/>
       </div>
       <p>
         <a href="http://www.bbc.co.uk/programmes/b00ryl03#synopsis"

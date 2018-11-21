@@ -12,6 +12,11 @@ button {
   font-size: 16px;
 }
 
+.quentin-theorem{
+  width: 80%;
+  height: auto;
+}
+
 .large {
   font-size: 24px;
 }
@@ -100,8 +105,8 @@ input {
   color: #b4975a;
 }
 
-.content-only-page .content img {
-  height: 100px;
+.content-only-page .content-only-image {
+  width: 100px;
   margin: 10px;
 }
 
@@ -261,3 +266,4 @@ input {
     transform: rotate(360deg);
   }
 }
+

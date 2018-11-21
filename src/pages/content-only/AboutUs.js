@@ -25,7 +25,7 @@ const About = () => {
 
       <div className='about-persona'>
         <p><b>Alan Bundy</b></p>
-        <a href="http://homepages.inf.ed.ac.uk/bundy/"> <img src={alanBundy}/></a>
+        <a href="http://homepages.inf.ed.ac.uk/bundy/"> <img className='content-only-image'  src={alanBundy}/></a>
 
         <p>{local[ 'about_alan' ]}</p>
       </div>
@@ -40,7 +40,7 @@ const About = () => {
 
       <div className='about-persona'>
         <p><b>Lucas Dixon</b></p>
-        <a href="http://homepages.inf.ed.ac.uk/ldixon/"><img src={lucasDixon}/></a>
+        <a href="http://homepages.inf.ed.ac.uk/ldixon/"><img className='content-only-image' src={lucasDixon}/></a>
 
 
         <p>{local[ 'about_lucas' ]}</p>
@@ -49,7 +49,7 @@ const About = () => {
 
       <div className='about-persona'>
         <p><b>Moa Johansson</b></p>
-        <a href="http://homepages.inf.ed.ac.uk/v1mjoha1/"> <img src={moaJohannson}/></a>
+        <a href="http://homepages.inf.ed.ac.uk/v1mjoha1/"> <img className='content-only-image' src={moaJohannson}/></a>
 
         <p>{local[ 'about_moa' ]}</p>
       </div>

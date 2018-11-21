@@ -20,3 +20,4 @@ export anne_glover_small from './anne_glover_small.jpg';
 export neds_theorem from './neds_theorem.jpg';
 export question_icon from './question_icon.png';
 export small_logo from './small_logo.png';
+export quentins_theorem from './Quentins_Theorem.jpg';

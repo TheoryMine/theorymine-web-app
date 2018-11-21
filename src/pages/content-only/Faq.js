@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { local } from "../../common/utils/localization"
-import infoPageBackground from "../../images/info-page-background.gif"
 import ContentPage from "./ContentPage"
 import { Link } from "react-router-dom"
 import { pagesUrls } from "../../common/navigation/navigationConstants"
