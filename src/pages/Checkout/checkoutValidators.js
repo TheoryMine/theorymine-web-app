@@ -5,8 +5,7 @@ import { inappropriate } from "../../common/utils/inappropriateList"
 export const checkoutValidators = {
 
   isInappropriate: fieldValue => {
-    const aaa = inappropriate.map(i => (fieldValue.split(' ')).includes(i) ? i : null)
-    console.log('******', aaa);
+    inappropriate.map(i => (fieldValue.split(' ')).includes(i) ? i : null)
     return {
     name: 'is-inappropriate',
     isValid: !fieldValue || !(inappropriate.some( i => (fieldValue.split(' ')).includes(i) )),
