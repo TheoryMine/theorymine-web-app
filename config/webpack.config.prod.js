@@ -23,27 +23,12 @@ module.exports = {
         exclude: /node_modules/,
       },
       {
-        test: /\.scss$/,
-        use: extractScss.extract({
-          use: [
-            {
-              loader: 'css-loader',
-              options: {
-                modules: true,
-                localIdentName: '[name]__[local]_[hash:base64:5]',
-              },
-            },
-            {
-              loader: 'sass-loader',
-              options: {
-                modules: true,
-                localIdentName: '[name]__[local]_[hash:base64:5]',
-              },
-            },
-          ],
-          // use style-loader in development
-          fallback: 'style-loader',
-        }),
+        test: /.scss$/,
+        use: [
+          { loader: "style-loader" },
+          { loader: "css-loader", options: { sourceMap: true } },
+          { loader: "sass-loader", options: { sourceMap: true } }
+        ]
       },
       {
         test: /\.html$/,
